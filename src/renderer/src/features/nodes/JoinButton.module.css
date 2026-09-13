@@ -1,0 +1,39 @@
+.wrap {
+  display: inline-flex;
+  flex: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.intro {
+  margin-bottom: var(--space-3);
+  color: var(--muted-72);
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted-62);
+}
+
+.reason {
+  min-height: 96px;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-md);
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  outline: none;
+  resize: vertical;
+}
+
+.reason:focus {
+  border-color: var(--accent);
+}

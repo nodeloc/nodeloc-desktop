@@ -1,0 +1,27 @@
+node_modules/
+out/
+dist/
+release/
+build/
+work/
+coverage/
+*.log
+.DS_Store
+.eslintcache
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.mobileprovision
+
+# Editor and operating-system state
+.idea/
+*.swp
+Thumbs.db

@@ -1,0 +1,39 @@
+.stack {
+  display: inline-grid;
+}
+
+.idle,
+.hover {
+  display: inline-flex;
+  grid-area: 1 / 1;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.hover {
+  visibility: hidden;
+}
+
+.swappable.swappable:hover:not(:disabled),
+.swappable.swappable:focus-visible {
+  color: var(--danger);
+  border-color: color-mix(in srgb, var(--danger) 45%, transparent);
+  background: color-mix(in srgb, var(--danger) 8%, transparent);
+}
+
+.swappable:hover:not(:disabled) .idle,
+.swappable:focus-visible .idle {
+  visibility: hidden;
+}
+
+.swappable:hover:not(:disabled) .hover,
+.swappable:focus-visible .hover {
+  visibility: visible;
+}
+
+/* A state with nothing to undo (a creator's 已加入, 已申请). */
+.static.static:hover {
+  background: var(--surface);
+  cursor: default;
+}

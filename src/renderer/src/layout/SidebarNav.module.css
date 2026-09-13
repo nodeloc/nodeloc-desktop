@@ -1,0 +1,72 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 48px;
+  padding: 0 var(--space-6);
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--divider);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-4) var(--space-3) var(--space-2);
+}
+
+.sectionTitle {
+  padding: var(--space-2) var(--space-3);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--muted-55);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 34px;
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  color: var(--muted-72);
+}
+
+.icon {
+  display: flex;
+  flex: none;
+  align-items: center;
+  font-size: 18px;
+}
+
+.label {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.trailing {
+  flex: none;
+  font-size: 11px;
+  color: var(--muted-45);
+}
+
+.link:hover {
+  color: var(--text);
+  background: var(--hover);
+}
+
+.linkActive,
+.linkActive:hover {
+  color: var(--text);
+  background: var(--selected);
+}
+
+.linkActive .icon {
+  color: var(--accent);
+}

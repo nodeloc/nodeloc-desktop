@@ -1,0 +1,94 @@
+.author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.avatarLink {
+  display: flex;
+  flex: none;
+}
+
+.lines {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.35;
+}
+
+.reply .lines {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--space-3);
+}
+
+.nameLine {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.username {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.op .username {
+  font-size: 15px;
+}
+
+.reply .username {
+  font-size: 13px;
+}
+
+.username:hover {
+  text-decoration: underline;
+}
+
+.handle {
+  font-size: 12px;
+  color: var(--muted-45);
+}
+
+.title {
+  font-size: 12px;
+  color: var(--accent-2-600);
+}
+
+.badge {
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.badge[data-tone='accent'] {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.badge[data-tone='accent2'] {
+  color: var(--accent-2-600);
+  background: color-mix(in srgb, var(--accent-2) 16%, transparent);
+}
+
+.badge[data-tone='danger'] {
+  color: var(--danger);
+  background: color-mix(in srgb, var(--danger) 12%, transparent);
+}
+
+.metaLine {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 12px;
+  color: var(--muted-45);
+}
+
+.postNumber {
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,26 @@
+/* Mirrors TopicList's frame so the page doesn't jump when the list takes over. */
+.page {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.toolbar {
+  display: flex;
+  flex: none;
+  align-items: center;
+  height: 48px;
+  padding: 0 var(--space-4) 0 var(--space-6);
+  border-bottom: 1px solid var(--divider);
+}
+
+.toolbarSkeleton {
+  width: 360px;
+}
+
+.scroller {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}

@@ -1,0 +1,9 @@
+.select {
+  height: 28px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  color: var(--text);
+  background: var(--surface);
+}

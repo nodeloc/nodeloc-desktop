@@ -1,0 +1,28 @@
+.notice {
+  margin: var(--space-2) 0;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 34px;
+  padding: var(--space-1) var(--space-2) var(--space-1) var(--space-4);
+  border: 1px dashed var(--neutral-500);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  color: var(--muted-55);
+  background: var(--surface);
+}
+
+.label {
+  flex: 1;
+  min-width: 0;
+}
+
+.content {
+  margin-top: var(--space-3);
+  padding-left: var(--space-4);
+  border-left: 2px solid var(--neutral-400);
+  opacity: 0.72;
+}

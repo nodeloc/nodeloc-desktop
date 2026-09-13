@@ -1,0 +1,18 @@
+.card {
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+}

@@ -1,0 +1,4 @@
+/* Not checked in yet today: draw the eye to it. */
+.pending {
+  color: var(--accent);
+}

@@ -1,0 +1,48 @@
+.panel {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: var(--space-6);
+  width: var(--detail-width);
+  padding: var(--space-6);
+  overflow-y: auto;
+  border-left: 1px solid var(--divider);
+  background: var(--bg);
+}
+
+.topicPanel {
+  position: relative;
+  flex: 1 1 0;
+  gap: 0;
+  width: 0;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-top: 1px solid var(--divider);
+  border-right: 1px solid var(--divider);
+  border-left: 0;
+}
+
+@media (max-width: 1099px) {
+  .panel {
+    display: none;
+  }
+
+  /* Drawer over the main column below the title bar. */
+  .panel[data-overlay='true'] {
+    position: fixed;
+    top: 36px;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    display: flex;
+    max-width: calc(100vw - 48px);
+    background: var(--bg);
+    box-shadow: -8px 0 24px rgb(0 0 0 / 0.2);
+  }
+
+  .topicPanel {
+    width: min(720px, calc(100vw - var(--rail-width)));
+  }
+}

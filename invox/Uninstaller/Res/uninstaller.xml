@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<Window size="420,520" caption="0,0,0,44" sizebox="6,6,6,6" roundcorner="12,12">
+	<Font id="0" name="微软雅黑" size="12" />
+	<Font id="1" name="微软雅黑" size="14" />
+	<Font id="2" name="微软雅黑" size="16" />
+	<Font id="3" name="微软雅黑" size="18" />
+	<Font id="5" name="微软雅黑" size="12" bold="true" />
+	<Font id="6" name="微软雅黑" size="14" bold="true" />
+	<Font id="7" name="微软雅黑" size="16" bold="true" />
+	<Font id="8" name="微软雅黑" size="18" bold="true" />
+	<Font id="9" name="微软雅黑" size="12" italic="true" />
+	<Font id="10" name="微软雅黑" size="14" italic="true" />
+	<Font id="11" name="微软雅黑" size="16" italic="true" />
+	<Font id="12" name="微软雅黑" size="18" italic="true" />
+	<Default name="Label" value="textcolor=&quot;#FFFFFFFF&quot;" />
+	<Default name="Text" value="textcolor=&quot;#FFFFFFFF&quot;" />
+	<Default name="Button" value="textcolor=&quot;#FFFFFFFF&quot; cursor=&quot;hand&quot;" />
+	<Default name="CheckBox" value="width=&quot;18&quot; height=&quot;18&quot; bkcolor=&quot;#12FFFFFF&quot; selectedbkcolor=&quot;#FF009966&quot; selectedimage=&quot;images\tick.png&quot; bordercolor=&quot;#30FFFFFF&quot; bordersize=&quot;1&quot; borderround=&quot;9,9&quot; cursor=&quot;hand&quot;" />
+	<Default name="RichEdit" value="height=&quot;80&quot; multiline=&quot;true&quot; vscrollbar=&quot;true&quot; textpadding=&quot;5,5,5,5&quot; font=&quot;0&quot; textcolor=&quot;#FFFFFFFF&quot; nativetextcolor=&quot;#FFFFFFFF&quot; bkcolor=&quot;#0FFFFFFF&quot; nativebkcolor=&quot;#0FFFFFFF&quot; tipvaluecolor=&quot;#FFA1A1A1&quot; bordercolor=&quot;#1EFFFFFF&quot; bordersize=&quot;1&quot; borderround=&quot;5,5&quot; focusbordercolor=&quot;#3CFFFFFF&quot;" />
+	<Default name="Edit" value="height=&quot;36&quot; font=&quot;0&quot; textcolor=&quot;#FFFFFFFF&quot; nativetextcolor=&quot;#FFFFFFFF&quot; bkcolor=&quot;#0FFFFFFF&quot; nativebkcolor=&quot;#0FFFFFFF&quot; tipvaluecolor=&quot;#FFA1A1A1&quot; bordercolor=&quot;#1EFFFFFF&quot; bordersize=&quot;1&quot; borderround=&quot;5,5&quot; focusbordercolor=&quot;#3CFFFFFF&quot;" />
+	<Default name="Progress" value="height=&quot;8&quot; bkcolor=&quot;#22FFFFFF&quot; forecolor=&quot;#FF00B87A&quot; borderround=&quot;4,4&quot;" />
+	<Default name="VScrollBar" shared="true" value="width=&quot;8&quot; showbutton1=&quot;false&quot; showbutton2=&quot;false&quot; thumbnormalimage=&quot;file='images\vscrollbar.png' source='0,60,8,100' corner='0,4,0,4'&quot; thumbhotimage=&quot;file='images\vscrollbar.png' source='8,60,16,100' corner='0,4,0,4'&quot; thumbpushedimage=&quot;file='images\vscrollbar.png' source='16,60,24,100' corner='0,4,0,4'&quot; railnormalimage=&quot;&quot; railhotimage=&quot;&quot; railpushedimage=&quot;&quot; raildisabledimage=&quot;&quot; bknormalimage=&quot;file='images\vscrollbar.png' source='0,0,8,60' corner='0,4,0,4'&quot; bkhotimage=&quot;&quot; bkpushedimage=&quot;&quot; bkdisabledimage=&quot;&quot; " />
+	<Default name="HScrollBar" shared="true" value="height=&quot;8&quot; showbutton1=&quot;false&quot; showbutton2=&quot;false&quot; thumbnormalimage=&quot;file='images\hscrollbar.png' source='0,0,32,8' corner='4,0,4,0'&quot; thumbhotimage=&quot;file='images\hscrollbar.png' source='0,8,32,16' corner='4,0,4,0'&quot; thumbpushedimage=&quot;file='images\hscrollbar.png' source='0,16,32,24' corner='4,0,4,0'&quot; railnormalimage=&quot;&quot; railhotimage=&quot;&quot; railpushedimage=&quot;&quot; raildisabledimage=&quot;&quot; bknormalimage=&quot;file='images\hscrollbar.png' source='0,0,32,8' corner='4,0,4,0'&quot; bkhotimage=&quot;&quot; bkpushedimage=&quot;&quot; bkdisabledimage=&quot;&quot; " />
+	<Style name="text_primary" value="textcolor=&quot;#FFE5EDF5&quot;" />
+	<Style name="text_secondary" value="textcolor=&quot;#FF94A8BC&quot;" />
+	<Style name="text_link" value="textcolor=&quot;#FF52D6AA&quot; hottextcolor=&quot;#FF7DE6C3&quot;" />
+	<Style name="btn_default" />
+	<Style name="btn_primary" value="height=&quot;44&quot; font=&quot;6&quot; disabledtextcolor=&quot;#FF769084&quot; bkcolor=&quot;#FF009966&quot; hotbkcolor=&quot;#FF00B87A&quot; disabledbkcolor=&quot;#80009966&quot; borderround=&quot;22,22&quot;" />
+	<Style name="radio" value="width=&quot;18&quot; height=&quot;18&quot; bkcolor=&quot;#12FFFFFF&quot; selectedbkcolor=&quot;#FF009966&quot; selectedimage=&quot;images\tick.png&quot; bordercolor=&quot;#30FFFFFF&quot; bordersize=&quot;1&quot; borderround=&quot;9,9&quot; cursor=&quot;hand&quot;" />
+	<VerticalLayout bkcolor="#FF131D29">
+		<!-- 标题栏	-->
+		<HorizontalLayout name="titlebar" height="44" childvalign="vcenter" bkcolor="#FF172433">
+			<Label text="uninstaller_title" resourcetext="true" font="1" padding="10,0,0,0" />
+			<!-- <Button name="minbtn" width="30" height="26" text="-" font="2" textcolor="#FFAAAAAA" hottextcolor="#FFFFFFFF" padding="0,5,0,0" />	-->
+			<Button name="closebtn" width="16" height="16" normalimage="images\close.png" hotimage="images\close_hot.png" padding="0,0,10,0" />
+		</HorizontalLayout>
+		<!-- 第一页：反馈页面	-->
+		<VerticalLayout name="page1" padding="30,30,30,30" visible="true">
+			<!--	Logo	-->
+			<VerticalLayout childalign="center" childvalign="vcenter">
+				<Control width="270" height="79" bkimage="IMG_LOGO" />
+				<Label height="40" text="welcome_text" resourcetext="true" font="2" align="center" />
+			</VerticalLayout>
+			<VerticalLayout height="200">
+				<!-- 卸载原因	-->
+				<VerticalLayout height="60">
+					<Label text="reason_label" resourcetext="true" style="text_secondary" font="1" height="25" />
+					<HorizontalLayout height="26">
+						<HorizontalLayout height="26" childvalign="vcenter">
+							<Option name="reason1" group="reason" selected="true" style="radio" />
+							<Button text="reason1_text" resourcetext="true" style="text_primary" padding="5,0,0,0" font="0" hottextcolor="#FFFFFFFF" autocalcwidth="true" userdata="reason1" />
+						</HorizontalLayout>
+						<HorizontalLayout height="26" childvalign="vcenter">
+							<Option name="reason2" group="reason" style="radio" />
+							<Button text="reason2_text" resourcetext="true" style="text_primary" padding="5,0,0,0" font="0" hottextcolor="#FFFFFFFF" autocalcwidth="true" userdata="reason2" />
+						</HorizontalLayout>
+						<HorizontalLayout height="26" childvalign="vcenter">
+							<Option name="reason3" group="reason" style="radio" />
+							<Button text="reason3_text" resourcetext="true" style="text_primary" padding="5,0,0,0" font="0" hottextcolor="#FFFFFFFF" autocalcwidth="true" userdata="reason3" />
+						</HorizontalLayout>
+					</HorizontalLayout>
+				</VerticalLayout>
+				<!-- 用户反馈	-->
+				<VerticalLayout>
+					<Label text="feedback_label" resourcetext="true" font="1" style="text_secondary" />
+					<RichEdit name="feedback_edit" />
+				</VerticalLayout>
+			</VerticalLayout>
+			<!-- 卸载按钮	-->
+			<HorizontalLayout height="40" childalign="center">
+				<Button name="uninstall_btn" text="uninstall_btn" resourcetext="true" style="btn_primary" width="240" height="44" />
+			</HorizontalLayout>
+		</VerticalLayout>
+		<!-- 第二页：卸载进度页面	-->
+		<VerticalLayout name="page2" padding="30, 30, 30, 30" visible="false">
+			<!--	Logo	-->
+			<VerticalLayout childalign="center" childvalign="vcenter">
+				<Control width="270" height="79" bkimage="IMG_LOGO" />
+				<Label height="40" text="welcome_text" resourcetext="true" font="2" align="center" />
+			</VerticalLayout>
+			<!-- 进度条和进度文本	-->
+			<VerticalLayout>
+				<Progress name="uninstall_progress" />
+				<Control height="20" />
+				<Text name="progress_text" text="uninstalling" resourcetext="true" style="text_secondary" height="40" font="0" align="center" />
+			</VerticalLayout>
+		</VerticalLayout>
+		<!-- 第三页：卸载完成页面	-->
+		<VerticalLayout name="page3" padding="30,30,30,30" visible="false">
+			<!--	Logo	-->
+			<VerticalLayout childalign="center" childvalign="vcenter">
+				<Control width="270" height="79" bkimage="IMG_LOGO" />
+				<Label height="40" text="welcome_text" resourcetext="true" font="2" align="center" />
+			</VerticalLayout>
+			<!-- 完成文本	-->
+			<VerticalLayout>
+				<Label name="complete_text" text="uninstall_complete" align="center" resourcetext="true" style="text_primary" font="1" />
+				<Control height="40" />
+				<!-- 再见按钮	-->
+				<HorizontalLayout height="40" childalign="center">
+					<Button name="goodbye_btn" text="goodbye_btn" resourcetext="true" style="btn_primary" width="240" height="44" />
+				</HorizontalLayout>
+			</VerticalLayout>
+		</VerticalLayout>
+	</VerticalLayout>
+</Window>

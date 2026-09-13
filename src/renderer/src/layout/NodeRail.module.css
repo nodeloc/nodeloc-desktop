@@ -1,0 +1,163 @@
+.rail {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  width: var(--rail-width);
+  padding: var(--space-3) 0;
+  background: var(--header-bg);
+  user-select: none;
+}
+
+.nodes {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.nodes::-webkit-scrollbar {
+  display: none;
+}
+
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* Marks the recommended fallback for members who haven't joined a node yet. */
+.label {
+  flex: none;
+  max-width: 100%;
+  padding: 0 var(--space-2);
+  overflow: hidden;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  color: var(--muted-45);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.divider {
+  flex: none;
+  width: 32px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--divider);
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex: none;
+  justify-content: center;
+  width: 100%;
+  color: var(--muted-72);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  overflow: hidden;
+  border-radius: 50%;
+  font-size: 22px;
+  background: color-mix(in srgb, var(--text) 8%, transparent);
+  transition:
+    background-color var(--duration-quick) var(--ease-standard),
+    color var(--duration-quick) var(--ease-standard);
+}
+
+.plain .icon {
+  background: transparent;
+}
+
+.nodeIcon {
+  border-radius: inherit;
+}
+
+.item:hover .icon {
+  color: var(--text);
+  background: color-mix(in srgb, var(--text) 14%, transparent);
+}
+
+.active .icon,
+.active:hover .icon {
+  color: #ffffff;
+  background: color-mix(in srgb, var(--accent) 76%, transparent);
+}
+
+.plain.active .icon,
+.plain:hover .icon {
+  background: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+  .active .icon,
+  .active:hover .icon {
+    color: var(--neutral-900);
+  }
+}
+
+/* Discord's selection pill on the rail edge. */
+.pill {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 4px;
+  height: 0;
+  border-radius: 0 4px 4px 0;
+  background: var(--text);
+  transform: translateY(-50%);
+  transition: height var(--duration-quick) var(--ease-standard);
+}
+
+.item:hover .pill {
+  height: 18px;
+}
+
+.active .pill,
+.active:hover .pill {
+  height: 36px;
+}
+
+/* Unread markers sit on the icon's lower-right corner. */
+.badge,
+.dot {
+  position: absolute;
+  right: calc(50% - 25px);
+  bottom: -2px;
+  border: 3px solid var(--header-bg);
+  background: var(--danger);
+  pointer-events: none;
+}
+
+.badge {
+  min-width: 22px;
+  height: 22px;
+  padding: 0 4px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}

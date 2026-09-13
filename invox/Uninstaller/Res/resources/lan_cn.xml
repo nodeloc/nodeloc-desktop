@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Res>
+  <Text id="uninstaller_title" value="卸载 NodeLoc" />
+  <Text id="welcome_text" value="NodeLoc" />
+  <Text id="feedback_label" value="反馈（可选）：" />
+  <Text id="uninstall_btn" value="卸载 NodeLoc" />
+  <Text id="uninstalling" value="正在卸载..." />
+  <Text id="uninstall_complete" value="卸载完成，感谢使用 NodeLoc。" />
+  <Text id="goodbye_btn" value="完成" />
+
+  <Text id="progress_preparing" value="正在准备卸载..." />
+  <Text id="progress_app_running" value="NodeLoc 正在运行，正在尝试关闭..." />
+  <Text id="progress_app_close_failed" value="无法关闭 NodeLoc，请手动关闭后重试。" />
+  <Text id="progress_calculating_size" value="正在计算文件大小..." />
+  <Text id="progress_removing_shortcuts" value="正在删除快捷方式..." />
+  <Text id="progress_removing_files" value="正在删除应用文件..." />
+  <Text id="progress_files_removed" value="应用文件已删除" />
+  <Text id="progress_cleaning_start_menu" value="正在清理开始菜单..." />
+  <Text id="progress_cleaning_registry" value="正在清理应用信息..." />
+  <Text id="progress_complete" value="卸载完成！" />
+
+  <Text id="reason_label" value="卸载原因：" />
+  <Text id="reason1_text" value="暂时不需要" />
+  <Text id="reason2_text" value="无法正常使用" />
+  <Text id="reason3_text" value="其他" />
+  <Text id="reason_unknown" value="未填写" />
+
+  <Text id="msgbox_title" value="NodeLoc" />
+  <Text id="msgbox_confirm" value="确认" />
+  <Text id="msgbox_cancel" value="取消" />
+  <Text id="msgbox_confirm_exit_message" value="卸载正在进行，确定退出吗？{\n}{\n}强制退出可能留下未删除的文件、应用信息或快捷方式。建议等待卸载完成。" />
+  <Text id="failed_message" value="卸载失败。" />
+</Res>

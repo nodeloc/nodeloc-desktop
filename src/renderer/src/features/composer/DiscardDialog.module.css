@@ -1,0 +1,11 @@
+.body {
+  padding-bottom: var(--space-2);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted-72);
+}
+
+/* Element + class: wins over the button's own variant colour. */
+button.danger {
+  color: var(--danger);
+}

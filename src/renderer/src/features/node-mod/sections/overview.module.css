@@ -1,0 +1,144 @@
+.notice {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  color: var(--accent-2-600);
+  background: color-mix(in srgb, var(--accent-2) 14%, transparent);
+}
+
+.notice svg {
+  flex: none;
+  font-size: 16px;
+}
+
+a.notice:hover {
+  text-decoration: underline;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--space-4);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-lg);
+  color: var(--text);
+  background: var(--bg);
+}
+
+.cardLink:hover {
+  background: var(--hover);
+}
+
+.cardAlert {
+  border-color: color-mix(in srgb, var(--accent-2) 60%, transparent);
+  background: color-mix(in srgb, var(--accent-2) 8%, var(--bg));
+}
+
+.cardLabel {
+  font-size: 12px;
+  color: var(--muted-62);
+}
+
+.cardValue {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+.cardAlert .cardValue {
+  color: var(--accent-2-600);
+}
+
+.trends {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-4);
+}
+
+.trend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-lg);
+  background: var(--bg);
+}
+
+.trendHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.trendTotal {
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 64px;
+}
+
+.bar {
+  flex: 1;
+  min-width: 2px;
+  border-radius: 2px 2px 0 0;
+  background: var(--neutral-400);
+}
+
+.barFilled {
+  background: var(--accent);
+}
+
+.range {
+  padding: var(--space-2) 0;
+}
+
+.rangeActive .date {
+  border-color: var(--accent);
+}
+
+.date {
+  width: 150px;
+  height: 28px;
+  font-size: 13px;
+}
+
+.total {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.rewardForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.kinds {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.kind {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 14px;
+}

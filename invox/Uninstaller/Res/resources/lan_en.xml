@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Res>
+  <Text id="uninstaller_title" value="Uninstall NodeLoc" />
+  <Text id="welcome_text" value="NodeLoc" />
+  <Text id="feedback_label" value="Feedback (optional):" />
+  <Text id="uninstall_btn" value="Uninstall NodeLoc" />
+  <Text id="uninstalling" value="Uninstalling..." />
+  <Text id="uninstall_complete" value="NodeLoc has been removed. Thank you for using it." />
+  <Text id="goodbye_btn" value="Done" />
+
+  <Text id="progress_preparing" value="Preparing to uninstall..." />
+  <Text id="progress_app_running" value="NodeLoc is running. Attempting to close it..." />
+  <Text id="progress_app_close_failed" value="Unable to close NodeLoc. Close it manually and try again." />
+  <Text id="progress_calculating_size" value="Calculating file size..." />
+  <Text id="progress_removing_shortcuts" value="Removing shortcuts..." />
+  <Text id="progress_removing_files" value="Removing application files..." />
+  <Text id="progress_files_removed" value="Application files removed" />
+  <Text id="progress_cleaning_start_menu" value="Cleaning Start menu shortcuts..." />
+  <Text id="progress_cleaning_registry" value="Cleaning application information..." />
+  <Text id="progress_complete" value="Uninstall complete!" />
+
+  <Text id="reason_label" value="Why are you uninstalling?" />
+  <Text id="reason1_text" value="I no longer need it" />
+  <Text id="reason2_text" value="It does not work" />
+  <Text id="reason3_text" value="Other" />
+  <Text id="reason_unknown" value="Not specified" />
+
+  <Text id="msgbox_title" value="NodeLoc" />
+  <Text id="msgbox_confirm" value="Confirm" />
+  <Text id="msgbox_cancel" value="Cancel" />
+  <Text id="msgbox_confirm_exit_message" value="Uninstallation is still running. Are you sure you want to exit?{\n}{\n}Stopping now may leave files, application data, or shortcuts behind. Waiting for completion is recommended." />
+  <Text id="failed_message" value="Uninstallation failed." />
+</Res>

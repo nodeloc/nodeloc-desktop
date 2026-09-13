@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Res>
+  <Text id="installer_title" value="NodeLoc 安装程序" />
+  <Text id="welcome_text" value="欢迎使用 NodeLoc" />
+  <Text id="agree_prefix" value="我已阅读并同意" />
+  <Text id="privacy_text" value="《隐私政策》" />
+  <Text id="custom_install" value="自定义安装" />
+  <Text id="quick_install" value="快速安装" />
+  <Text id="install_path" value="安装路径：" />
+  <Text id="desktop_shortcut" value="创建桌面快捷方式" />
+  <Text id="install_now" value="立即安装" />
+  <Text id="installing" value="正在安装..." />
+  <Text id="launch_now" value="立即打开" />
+
+  <Text id="progress_preparing" value="正在准备安装..." />
+  <Text id="progress_app_running_confirm" value="检测到 NodeLoc 正在运行，是否关闭后继续？" />
+  <Text id="progress_app_running" value="NodeLoc 正在运行，请先关闭应用。" />
+  <Text id="progress_insufficient_privilege" value="权限不足，请以管理员身份运行。" />
+  <Text id="progress_path_too_long" value="安装路径过长，请选择较短的路径。" />
+  <Text id="progress_invalid_path" value="安装路径无效，请重新选择。" />
+  <Text id="progress_unknown_error" value="安装前检查失败。" />
+  <Text id="progress_archive_not_found" value="找不到安装包文件。" />
+  <Text id="progress_7zdll_not_found" value="找不到 7zxa.dll。" />
+  <Text id="progress_create_temp_failed" value="无法创建临时目录。" />
+  <Text id="progress_extracting_package" value="正在读取安装包..." />
+  <Text id="progress_resource_7zdll_not_found" value="找不到解压组件。" />
+  <Text id="progress_resource_app_not_found" value="找不到应用资源。" />
+  <Text id="progress_disk_full" value="磁盘空间不足，请清理后重试。" />
+  <Text id="progress_extract_package_failed" value="读取安装包失败，请检查磁盘空间和权限。" />
+  <Text id="progress_open_archive_failed" value="无法打开安装包。" />
+  <Text id="progress_creating_install_dir" value="正在创建安装目录..." />
+  <Text id="progress_create_install_dir_failed" value="无法创建安装目录，请检查权限。" />
+  <Text id="progress_extracting_files" value="正在安装文件..." />
+  <Text id="progress_extract_files_failed" value="安装文件失败。" />
+  <Text id="progress_files_extracted" value="应用文件安装完成" />
+  <Text id="progress_creating_start_menu" value="正在创建开始菜单快捷方式..." />
+  <Text id="progress_creating_desktop_shortcut" value="正在创建桌面快捷方式..." />
+  <Text id="progress_writing_registry" value="正在写入应用信息..." />
+  <Text id="progress_installation_complete" value="安装完成！" />
+  <Text id="progress_rollback_cleaning" value="安装失败，正在清理..." />
+  <Text id="progress_extracting_with_percent" value="正在安装文件... %d%%" />
+
+  <Text id="msgbox_title" value="NodeLoc" />
+  <Text id="msgbox_confirm" value="确认" />
+  <Text id="msgbox_cancel" value="取消" />
+  <Text id="msgbox_install_path_overwrite_message" value="安装目录已存在，是否覆盖安装？" />
+  <Text id="msgbox_install_path_overwrite_confirm" value="覆盖安装" />
+  <Text id="msgbox_install_path_overwrite_cancel" value="重新选择" />
+  <Text id="msgbox_confirm_exit_message" value="安装正在进行，确定退出吗？{\n}退出后将清理已安装的内容。" />
+  <Text id="msgbox_install_failed_message" value="安装失败。" />
+  <Text id="msgbox_browse_folder_title" value="选择安装目录" />
+</Res>

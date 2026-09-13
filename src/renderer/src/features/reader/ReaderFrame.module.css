@@ -1,0 +1,116 @@
+.frame {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* Same frame as TopicList's toolbar, so moving between list and topic doesn't jump. */
+.toolbar {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  height: 48px;
+  padding: 0 var(--space-4) 0 var(--space-6);
+  border-bottom: 1px solid var(--divider);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.titleText {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  user-select: text;
+}
+
+.titleIcon {
+  flex: none;
+  font-size: 14px;
+  color: var(--muted-45);
+}
+
+.featured {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 2px var(--space-3);
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-2-600);
+  background: color-mix(in srgb, var(--accent-2) 16%, transparent);
+}
+
+.titleSkeleton {
+  width: min(360px, 40%);
+}
+
+.actions {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.separator {
+  width: 1px;
+  height: 20px;
+  margin: 0 var(--space-2);
+  background: var(--divider);
+}
+
+.toggleOn {
+  color: var(--accent);
+}
+
+.body {
+  position: relative;
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.thread {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+
+.info {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: var(--space-6);
+  width: var(--detail-width);
+  padding: var(--space-6);
+  overflow-y: auto;
+  border-left: 1px solid var(--divider);
+  background: var(--bg);
+}
+
+/* Narrow windows: the pane slides over the thread instead of squeezing it. */
+@media (max-width: 1099px) {
+  .info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    box-shadow: -8px 0 24px rgb(0 0 0 / 0.2);
+  }
+}

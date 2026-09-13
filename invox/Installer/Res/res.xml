@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Res>
+  <Image id="IMG_LOGO" path="images\logo.png" />
+
+  <Xml id="XML_INSTALLER" path="installer.xml"/>
+  <Xml id="XML_MSG" path="msg.xml"/>
+</Res>

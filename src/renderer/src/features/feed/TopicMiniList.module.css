@@ -1,0 +1,99 @@
+/* Sits inside a PanelCard: bleeds past its padding so rows and dividers run edge to edge. */
+.list {
+  margin: 0 calc(var(--space-6) * -1) calc(var(--space-6) * -1);
+  padding: 0;
+  list-style: none;
+}
+
+.list li + li {
+  border-top: 1px solid var(--divider);
+}
+
+.row {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-6);
+  color: inherit;
+  text-decoration: none;
+}
+
+.row:hover {
+  background: var(--hover);
+}
+
+.list li:last-child .row {
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.source {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.node {
+  overflow: hidden;
+  font-weight: 500;
+  color: var(--accent);
+  text-overflow: ellipsis;
+}
+
+.time {
+  flex: none;
+  color: var(--muted-45);
+}
+
+.title {
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.titleUnread {
+  color: var(--accent);
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-2);
+  font-size: 12px;
+  color: var(--muted-45);
+}
+
+.stats span + span::before {
+  margin-right: var(--space-2);
+  content: '·';
+}
+
+.unread {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.thumbnail {
+  flex: none;
+  align-self: center;
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  background: var(--neutral-300);
+}

@@ -1,0 +1,25 @@
+.content {
+  position: relative;
+  min-height: 280px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.moreMenu {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  z-index: 4;
+}
+
+.moreButton {
+  color: #ffffff;
+  background: rgb(0 0 0 / 0.28);
+  backdrop-filter: blur(8px);
+}
+
+.moreButton:hover {
+  color: #ffffff !important;
+  background: rgb(0 0 0 / 0.42) !important;
+}

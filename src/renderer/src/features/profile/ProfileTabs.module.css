@@ -1,0 +1,42 @@
+/* Sticks to the top of the page scroller while the tab content scrolls. */
+.tabs {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: calc(var(--space-4) * -1);
+  overflow-x: auto;
+  border-bottom: 1px solid var(--divider);
+  background: var(--bg);
+  scrollbar-width: none;
+}
+
+.tab {
+  position: relative;
+  flex: none;
+  padding: var(--space-4) var(--space-4);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted-55);
+  transition: color var(--duration-quick) var(--ease-standard);
+}
+
+.tab:hover {
+  color: var(--text);
+}
+
+.tab[aria-current='page'] {
+  color: var(--text);
+}
+
+.tab[aria-current='page']::after {
+  position: absolute;
+  right: var(--space-4);
+  bottom: -1px;
+  left: var(--space-4);
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+  content: '';
+}

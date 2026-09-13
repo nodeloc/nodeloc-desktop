@@ -1,0 +1,28 @@
+.group {
+  animation: skeleton-pulse 0.9s ease-in-out infinite alternate;
+}
+
+.line,
+.circle {
+  display: block;
+  flex: none;
+  background: var(--neutral-300);
+}
+
+.line {
+  border-radius: var(--radius-sm);
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+@keyframes skeleton-pulse {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.55;
+  }
+}

@@ -1,0 +1,22 @@
+.inline {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 72px;
+  padding: 0 var(--space-6);
+  border-radius: var(--radius-lg);
+  font-size: 13px;
+  color: var(--muted-72);
+  background: var(--surface);
+}
+
+.inline > svg {
+  flex: none;
+  font-size: 18px;
+  color: var(--muted-45);
+}
+
+.inline > span {
+  flex: 1;
+  min-width: 0;
+}

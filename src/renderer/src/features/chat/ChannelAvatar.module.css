@@ -1,0 +1,38 @@
+.hash {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  color: var(--muted-72);
+  background: var(--neutral-300);
+}
+
+.hash svg {
+  width: 55%;
+  height: 55%;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.unread {
+  color: var(--muted-72);
+  background: var(--neutral-400);
+}
+
+.mention {
+  color: #ffffff;
+  background: var(--danger);
+}

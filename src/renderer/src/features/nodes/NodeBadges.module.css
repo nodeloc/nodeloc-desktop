@@ -1,0 +1,21 @@
+.verified {
+  display: inline-flex;
+  flex: none;
+  font-size: 1.05em;
+  color: var(--link);
+}
+
+.official {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 2px;
+  height: 18px;
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--accent-2-600);
+  background: color-mix(in srgb, var(--accent-2) 16%, transparent);
+}

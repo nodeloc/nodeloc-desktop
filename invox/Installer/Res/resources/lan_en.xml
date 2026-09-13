@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Res>
+  <Text id="installer_title" value="NodeLoc Setup" />
+  <Text id="welcome_text" value="Welcome to NodeLoc" />
+  <Text id="agree_prefix" value="I have read and agree to the" />
+  <Text id="privacy_text" value="Privacy" />
+  <Text id="custom_install" value="Custom Installation" />
+  <Text id="quick_install" value="Quick Installation" />
+  <Text id="install_path" value="Install Path:" />
+  <Text id="desktop_shortcut" value="Create Desktop Shortcut" />
+  <Text id="install_now" value="Install Now" />
+  <Text id="installing" value="Installing..." />
+  <Text id="launch_now" value="Launch Now" />
+  
+  <!-- Progress messages -->
+  <Text id="progress_preparing" value="Preparing installation..." />
+  <Text id="progress_app_running_confirm" value="The application is running, are you sure to close it?" />
+  <Text id="progress_app_running" value="Application is running, please close it first!" />
+  <Text id="progress_insufficient_privilege" value="Insufficient privileges, please run as administrator!" />
+  <Text id="progress_path_too_long" value="Installation path is too long, please select a shorter path!" />
+  <Text id="progress_invalid_path" value="Invalid installation path, please select a valid path!" />
+  <Text id="progress_unknown_error" value="Pre-installation check failed!" />
+  <Text id="progress_archive_not_found" value="Installation package not found!" />
+  <Text id="progress_7zdll_not_found" value="7zxa.dll file not found!" />
+  <Text id="progress_create_temp_failed" value="Failed to create temporary directory!" />
+  <Text id="progress_extracting_package" value="Extracting installation package..." />
+  <Text id="progress_resource_7zdll_not_found" value="Resource IDR_7ZXA_DLL not found!" />
+  <Text id="progress_resource_app_not_found" value="Resource IDR_APP_7Z not found!" />
+  <Text id="progress_disk_full" value="Insufficient disk space, please clean up and try again!" />
+  <Text id="progress_extract_package_failed" value="Failed to extract installation package! Please check disk space and permissions." />
+  <Text id="progress_open_archive_failed" value="Failed to open archive!" />
+  <Text id="progress_creating_install_dir" value="Creating installation directory..." />
+  <Text id="progress_create_install_dir_failed" value="Failed to create installation directory! Please check permissions." />
+  <Text id="progress_extracting_files" value="Extracting files..." />
+  <Text id="progress_extract_files_failed" value="Failed to extract files!" />
+  <Text id="progress_files_extracted" value="Files extracted successfully" />
+  <Text id="progress_creating_start_menu" value="Creating start menu shortcut..." />
+  <Text id="progress_creating_desktop_shortcut" value="Creating desktop shortcut..." />
+  <Text id="progress_writing_registry" value="Writing registry..." />
+  <Text id="progress_installation_complete" value="Installation completed!" />
+  <Text id="progress_rollback_cleaning" value="Installation failed, cleaning up..." />
+  <Text id="progress_extracting_with_percent" value="Extracting files... %d%%" />
+  
+  <!-- Message box messages -->
+  <Text id="msgbox_title" value="NodeLoc" />
+  <Text id="msgbox_confirm" value="Confirm" />
+  <Text id="msgbox_cancel" value="Cancel" />
+  <Text id="msgbox_install_path_overwrite_message" value="Installation directory already exists. Do you want to overwrite it?" />
+  <Text id="msgbox_install_path_overwrite_confirm" value="Overwrite" />
+  <Text id="msgbox_install_path_overwrite_cancel" value="Reselect" />
+  <Text id="msgbox_confirm_exit_message" value="Installation is in progress. Are you sure you want to exit?{\n}All installed content will be rolled back." />
+  <Text id="msgbox_install_failed_message" value="Installation failed!" />
+  <Text id="msgbox_browse_folder_title" value="Please select installation directory" />
+</Res>

@@ -1,0 +1,111 @@
+.block {
+  margin: 0 0 0.85em;
+  overflow: hidden;
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+
+  --code-keyword: #cf222e;
+  --code-string: #0a3069;
+  --code-number: #0550ae;
+  --code-comment: #6e7781;
+  --code-title: #8250df;
+  --code-attr: #116329;
+  --code-meta: #953800;
+}
+
+@media (prefers-color-scheme: dark) {
+  .block {
+    --code-keyword: #ff7b72;
+    --code-string: #a5d6ff;
+    --code-number: #79c0ff;
+    --code-comment: #8b949e;
+    --code-title: #d2a8ff;
+    --code-attr: #7ee787;
+    --code-meta: #ffa657;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  padding: 0 var(--space-2) 0 var(--space-4);
+  border-bottom: 1px solid var(--divider);
+}
+
+.language {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted-55);
+}
+
+.pre {
+  margin: 0;
+  padding: var(--space-4);
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.pre code {
+  padding: 0;
+  font-family: var(--font-mono);
+  white-space: pre;
+  word-break: normal;
+  overflow-wrap: normal;
+  background: none;
+}
+
+.pre :global(.hljs-keyword),
+.pre :global(.hljs-selector-tag),
+.pre :global(.hljs-literal),
+.pre :global(.hljs-built_in),
+.pre :global(.hljs-type) {
+  color: var(--code-keyword);
+}
+
+.pre :global(.hljs-string),
+.pre :global(.hljs-regexp),
+.pre :global(.hljs-template-variable) {
+  color: var(--code-string);
+}
+
+.pre :global(.hljs-number),
+.pre :global(.hljs-variable),
+.pre :global(.hljs-symbol) {
+  color: var(--code-number);
+}
+
+.pre :global(.hljs-comment),
+.pre :global(.hljs-quote) {
+  font-style: italic;
+  color: var(--code-comment);
+}
+
+.pre :global(.hljs-title),
+.pre :global(.hljs-section),
+.pre :global(.hljs-function) {
+  color: var(--code-title);
+}
+
+.pre :global(.hljs-attr),
+.pre :global(.hljs-attribute),
+.pre :global(.hljs-name),
+.pre :global(.hljs-tag) {
+  color: var(--code-attr);
+}
+
+.pre :global(.hljs-meta),
+.pre :global(.hljs-params) {
+  color: var(--code-meta);
+}
+
+.pre :global(.hljs-addition) {
+  color: var(--code-attr);
+}
+
+.pre :global(.hljs-deletion) {
+  color: var(--code-keyword);
+}

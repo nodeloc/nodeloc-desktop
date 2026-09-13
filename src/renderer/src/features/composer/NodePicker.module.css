@@ -1,0 +1,192 @@
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  height: 38px;
+  padding: 0 var(--space-4) 0 var(--space-3);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  text-align: left;
+  color: var(--text);
+  background: var(--bg);
+  transition:
+    background-color var(--duration-quick) var(--ease-standard),
+    border-color var(--duration-quick) var(--ease-standard);
+}
+
+.trigger:hover {
+  background: var(--hover);
+}
+
+.trigger:focus-visible,
+.trigger[aria-expanded='true'] {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.invalid,
+.invalid:focus-visible {
+  border-color: var(--danger);
+}
+
+.triggerLabel,
+.optionName {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.placeholder {
+  padding-left: var(--space-1);
+  color: var(--muted-45);
+}
+
+.section {
+  margin-left: var(--space-3);
+  font-size: 12px;
+  color: var(--muted-45);
+}
+
+.caret {
+  flex: none;
+  color: var(--muted-45);
+}
+
+.popover {
+  position: fixed;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--bg);
+  box-shadow: var(--elevation-lg);
+  animation: pop 120ms var(--ease-standard);
+}
+
+.search {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-3);
+  height: 40px;
+  padding: 0 var(--space-4);
+  border-bottom: 1px solid var(--divider);
+  font-size: 16px;
+  color: var(--muted-45);
+}
+
+.search input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: var(--text);
+  background: transparent;
+}
+
+.search input::placeholder {
+  color: var(--muted-45);
+}
+
+.list {
+  flex: 1;
+  min-height: 0;
+  padding: var(--space-2);
+  overflow-y: auto;
+}
+
+.groupLabel {
+  padding: var(--space-3) var(--space-3) var(--space-1);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted-45);
+}
+
+/* Icon on the left; name and n/slug above, the node's introduction below. */
+.option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  min-height: 52px;
+  padding: var(--space-2) var(--space-3);
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: left;
+  color: var(--text);
+  background: transparent;
+}
+
+.option[data-active='true'] {
+  background: var(--hover);
+}
+
+.optionText {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.optionTop {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.optionTop .optionName {
+  flex: 0 1 auto;
+  font-weight: 600;
+}
+
+.optionSlug {
+  flex: none;
+  font-size: 12px;
+  color: var(--muted-45);
+}
+
+.optionDescription {
+  overflow: hidden;
+  font-size: 12px;
+  color: var(--muted-55);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.restricted {
+  flex: none;
+  font-size: 13px;
+  color: var(--muted-45);
+}
+
+.check {
+  flex: none;
+  color: var(--accent);
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-8) var(--space-4);
+  font-size: 13px;
+  color: var(--muted-45);
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+}

@@ -1,0 +1,35 @@
+.option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-2) 0;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  width: 232px;
+  white-space: normal;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.description {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--muted-55);
+}
+
+.check {
+  flex: none;
+  font-size: 15px;
+  color: var(--accent);
+  visibility: hidden;
+}
+
+.check[data-visible] {
+  visibility: visible;
+}

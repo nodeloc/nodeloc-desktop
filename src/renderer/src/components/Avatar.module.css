@@ -1,0 +1,25 @@
+.avatar {
+  flex: none;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--neutral-300);
+}
+
+.fallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  line-height: 1;
+  user-select: none;
+}
+
+.fallback[data-variant='0'] {
+  color: var(--accent-100);
+  background: var(--accent-800);
+}
+
+.fallback[data-variant='1'] {
+  color: var(--neutral-200);
+  background: var(--neutral-800);
+}

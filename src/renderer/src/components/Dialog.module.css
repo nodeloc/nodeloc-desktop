@@ -1,0 +1,92 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8);
+  background: rgb(0 0 0 / 0.45);
+  animation: fade-in 140ms var(--ease-standard);
+}
+
+.anchoredBackdrop {
+  align-items: initial;
+  justify-content: initial;
+  padding: 0;
+  background: transparent;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  max-height: calc(100vh - 80px);
+  border-radius: var(--radius-lg);
+  background: var(--bg);
+  box-shadow: var(--elevation-lg);
+  outline: none;
+  animation: rise-in 180ms var(--ease-standard);
+}
+
+.barePanel {
+  overflow: visible;
+  background: transparent;
+  box-shadow: none;
+}
+
+.anchoredPanel {
+  position: fixed;
+  max-width: calc(100vw - 24px);
+  visibility: hidden;
+}
+
+.anchoredPanel[data-positioned] {
+  visibility: visible;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-6) var(--space-6) 0;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.body {
+  flex: 1;
+  min-height: 0;
+  padding: var(--space-4) var(--space-6);
+  overflow-y: auto;
+}
+
+.bareBody {
+  padding: 0;
+  overflow: visible;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-6) var(--space-6);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+}

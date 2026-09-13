@@ -1,0 +1,80 @@
+.shell {
+  display: grid;
+  grid-template-rows: var(--titlebar-height) minmax(0, 1fr);
+  height: 100vh;
+  background: var(--bg);
+}
+
+.body {
+  display: flex;
+  min-height: 0;
+}
+
+.workspace {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  background: var(--bg);
+  box-shadow: inset 1px 1px 0 var(--divider);
+}
+
+/* Pop-out windows: nothing sits beside the main column. */
+.compactMain {
+  box-shadow: inset 0 1px 0 var(--divider);
+}
+
+.splitter {
+  position: relative;
+  z-index: 5;
+  flex: none;
+  width: 7px;
+  outline: none;
+  cursor: col-resize;
+  touch-action: none;
+  user-select: none;
+}
+
+.splitter::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 3px;
+  width: 1px;
+  background: var(--divider);
+  content: '';
+  transition: background-color var(--duration-quick) var(--ease-standard);
+}
+
+/* Keep the resize target between the sidebar and main column without a permanent rule. */
+.sidebarSplitter::before {
+  background: transparent;
+}
+
+.splitter:hover::before,
+.splitter:focus-visible::before,
+.splitter:active::before {
+  width: 3px;
+  left: 2px;
+  background: var(--accent);
+}
+
+@media (max-width: 1099px) {
+  .topicSplitter {
+    display: none;
+  }
+}
+
+@media (max-width: 799px) {
+  .sidebarSplitter {
+    display: none;
+  }
+}

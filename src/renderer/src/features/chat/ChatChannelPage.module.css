@@ -1,0 +1,87 @@
+.page {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.header {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-4);
+  height: 48px;
+  padding: 0 var(--space-4) 0 var(--space-6);
+  border-bottom: 1px solid var(--divider);
+}
+
+.headerSkeleton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 40%;
+}
+
+.icon {
+  display: flex;
+  flex: none;
+  align-items: center;
+  font-size: 20px;
+  color: var(--muted-55);
+}
+
+.avatars {
+  display: flex;
+}
+
+.avatars > * + * {
+  margin-left: -8px;
+  box-shadow: 0 0 0 2px var(--bg);
+}
+
+.titles {
+  display: flex;
+  flex: 1;
+  align-items: baseline;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.title {
+  flex: none;
+  max-width: 60%;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.description {
+  min-width: 0;
+  overflow: hidden;
+  font-size: 13px;
+  color: var(--muted-55);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.actions {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.members {
+  margin-right: var(--space-2);
+  font-size: 12px;
+  color: var(--muted-45);
+}
+
+/* Doubled up to outrank the icon button's own hover colours. */
+.actions .active,
+.actions .active:hover:not(:disabled) {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}

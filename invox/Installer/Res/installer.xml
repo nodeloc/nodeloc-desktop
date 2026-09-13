@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<Window size="420,520" caption="0,0,0,44" sizebox="6,6,6,6" roundcorner="12,12">
+	<Font id="0" name="微软雅黑" size="12" />
+	<Font id="1" name="微软雅黑" size="14" />
+	<Font id="2" name="微软雅黑" size="16" />
+	<Font id="3" name="微软雅黑" size="18" />
+	<Font id="5" name="微软雅黑" size="12" bold="true" />
+	<Font id="6" name="微软雅黑" size="14" bold="true" />
+	<Font id="7" name="微软雅黑" size="16" bold="true" />
+	<Font id="8" name="微软雅黑" size="18" bold="true" />
+	<Font id="9" name="微软雅黑" size="12" italic="true" />
+	<Font id="10" name="微软雅黑" size="14" italic="true" />
+	<Font id="11" name="微软雅黑" size="16" italic="true" />
+	<Font id="12" name="微软雅黑" size="18" italic="true" />
+	<Default name="Label" value="textcolor=&quot;#FFFFFFFF&quot;" />
+	<Default name="Text" value="textcolor=&quot;#FFFFFFFF&quot;" />
+	<Default name="Button" value="textcolor=&quot;#FFFFFFFF&quot; cursor=&quot;hand&quot;" />
+	<Default name="CheckBox" value="width=&quot;18&quot; height=&quot;18&quot; bkcolor=&quot;#12FFFFFF&quot; selectedbkcolor=&quot;#FF009966&quot; selectedimage=&quot;images\tick.png&quot; bordercolor=&quot;#30FFFFFF&quot; bordersize=&quot;1&quot; borderround=&quot;9,9&quot; cursor=&quot;hand&quot;" />
+	<Default name="RichEdit" value="height=&quot;80&quot; multiline=&quot;true&quot; vscrollbar=&quot;true&quot; textpadding=&quot;5,5,5,5&quot; font=&quot;0&quot; textcolor=&quot;#FFFFFFFF&quot; nativetextcolor=&quot;#FFFFFFFF&quot; bkcolor=&quot;#0FFFFFFF&quot; nativebkcolor=&quot;#0FFFFFFF&quot; tipvaluecolor=&quot;#FFA1A1A1&quot; bordercolor=&quot;#1EFFFFFF&quot; bordersize=&quot;1&quot; borderround=&quot;5,5&quot; focusbordercolor=&quot;#3CFFFFFF&quot;" />
+	<Default name="Edit" value="height=&quot;38&quot; font=&quot;0&quot; textcolor=&quot;#FFFFFFFF&quot; nativetextcolor=&quot;#FFFFFFFF&quot; bkcolor=&quot;#12FFFFFF&quot; nativebkcolor=&quot;#FF1B2838&quot; tipvaluecolor=&quot;#FF8FA3B8&quot; bordercolor=&quot;#24FFFFFF&quot; bordersize=&quot;1&quot; borderround=&quot;10,10&quot; focusbordercolor=&quot;#8000B87A&quot;" />
+	<Default name="Progress" value="height=&quot;8&quot; bkcolor=&quot;#22FFFFFF&quot; forecolor=&quot;#FF00B87A&quot; borderround=&quot;4,4&quot;" />
+	<Default name="VScrollBar" shared="true" value="width=&quot;8&quot; showbutton1=&quot;false&quot; showbutton2=&quot;false&quot; thumbnormalimage=&quot;file='images\vscrollbar.png' source='0,60,8,100' corner='0,4,0,4'&quot; thumbhotimage=&quot;file='images\vscrollbar.png' source='8,60,16,100' corner='0,4,0,4'&quot; thumbpushedimage=&quot;file='images\vscrollbar.png' source='16,60,24,100' corner='0,4,0,4'&quot; railnormalimage=&quot;&quot; railhotimage=&quot;&quot; railpushedimage=&quot;&quot; raildisabledimage=&quot;&quot; bknormalimage=&quot;file='images\vscrollbar.png' source='0,0,8,60' corner='0,4,0,4'&quot; bkhotimage=&quot;&quot; bkpushedimage=&quot;&quot; bkdisabledimage=&quot;&quot; " />
+	<Default name="HScrollBar" shared="true" value="height=&quot;8&quot; showbutton1=&quot;false&quot; showbutton2=&quot;false&quot; thumbnormalimage=&quot;file='images\hscrollbar.png' source='0,0,32,8' corner='4,0,4,0'&quot; thumbhotimage=&quot;file='images\hscrollbar.png' source='0,8,32,16' corner='4,0,4,0'&quot; thumbpushedimage=&quot;file='images\hscrollbar.png' source='0,16,32,24' corner='4,0,4,0'&quot; railnormalimage=&quot;&quot; railhotimage=&quot;&quot; railpushedimage=&quot;&quot; raildisabledimage=&quot;&quot; bknormalimage=&quot;file='images\hscrollbar.png' source='0,0,32,8' corner='4,0,4,0'&quot; bkhotimage=&quot;&quot; bkpushedimage=&quot;&quot; bkdisabledimage=&quot;&quot; " />
+	<Style name="text_primary" value="textcolor=&quot;#FFE5EDF5&quot;" />
+	<Style name="text_secondary" value="textcolor=&quot;#FF94A8BC&quot;" />
+	<Style name="text_link" value="textcolor=&quot;#FF52D6AA&quot; hottextcolor=&quot;#FF7DE6C3&quot;" />
+	<Style name="btn_default" />
+	<Style name="btn_primary" value="height=&quot;44&quot; font=&quot;6&quot; disabledtextcolor=&quot;#FF769084&quot; bkcolor=&quot;#FF009966&quot; hotbkcolor=&quot;#FF00B87A&quot; disabledbkcolor=&quot;#80009966&quot; borderround=&quot;22,22&quot;" />
+	<Style name="radio" value="width=&quot;18&quot; height=&quot;18&quot; bkcolor=&quot;#12FFFFFF&quot; selectedbkcolor=&quot;#FF009966&quot; selectedimage=&quot;images\tick.png&quot; bordercolor=&quot;#30FFFFFF&quot; bordersize=&quot;1&quot; borderround=&quot;9,9&quot; cursor=&quot;hand&quot;" />
+	<VerticalLayout bkcolor="#FF131D29">
+		<!--	标题栏	-->
+		<HorizontalLayout name="titlebar" height="44" childvalign="vcenter" bkcolor="#FF172433">
+			<Label text="installer_title" resourcetext="true" font="1" padding="10,0,0,0" />
+			<!-- <Button name="minbtn" width="30" height="26" text="-" font="2" textcolor="#FFAAAAAA" hottextcolor="#FFFFFFFF" padding="0,5,0,0" />	-->
+			<Button name="closebtn" width="16" height="16" normalimage="images\close.png" hotimage="images\close_hot.png" padding="0,0,10,0" />
+		</HorizontalLayout>
+		<!--	第一页：快速安装页面	-->
+		<VerticalLayout name="page1">
+			<!--	Logo	-->
+			<VerticalLayout childalign="center" childvalign="bottom">
+				<Control width="300" height="88" bkimage="IMG_LOGO" />
+				<Label height="40" text="welcome_text" resourcetext="true" font="2" align="center" />
+			</VerticalLayout>
+			<!--	安装按钮	-->
+			<HorizontalLayout childalign="center">
+				<Button name="quick_install_btn" text="install_now" resourcetext="true" style="btn_primary" width="240" height="44" padding="0,40,0,0"/>
+			</HorizontalLayout>
+			<!--	底部：切换自定义安装和协议	-->
+			<HorizontalLayout height="26" childvalign="bottom" padding="0,10,10,6">
+				<HorizontalLayout name="agree_area" childvalign="vcenter" padding="10,0,0,0">
+					<CheckBox name="agree_check" />
+					<Button name="agree_label" text="agree_prefix" resourcetext="true" style="text_primary" font="0" hottextcolor="#FFFFFFFF" autocalcwidth="true" padding="5,0,0,0" userdata="agree_check" />
+					<Button name="privacy_link" text="privacy_text" resourcetext="true" style="text_link" font="0" autocalcwidth="true" padding="2,0,0,0" cursor="hand" />
+				</HorizontalLayout>
+				<Button name="switch_custom_btn" text="custom_install" resourcetext="true" style="text_primary" font="0" hottextcolor="#FFFFFFFF" autocalcwidth="true" />
+			</HorizontalLayout>
+		</VerticalLayout>
+		<!--	第二页：自定义安装页面	-->
+		<VerticalLayout name="page2" visible="false">
+			<!--	Logo	-->
+			<VerticalLayout height="190" childalign="center" childvalign="vcenter" bkcolor="#FF172433">
+				<Control width="270" height="79" bkimage="IMG_LOGO" />
+				<Label text="welcome_text" resourcetext="true" font="2" align="center" height="40" />
+			</VerticalLayout>
+			<VerticalLayout padding="30,0,30,0">
+				<!--	自定义选项	-->
+				<VerticalLayout childalign="center" childvalign="vcenter">
+					<!--	自定义路径区域	-->
+					<HorizontalLayout height="26" childvalign="vcenter">
+						<Label text="install_path" width="60" resourcetext="true" style="text_secondary" font="0" autocalcwidth="true" />
+						<Edit name="path_edit" width="200" />
+						<Button name="browse_btn" padding="10,0,10,0" width="16" height="16" font="0" normalimage="images\folder.png" hotimage="images\folder_hot.png" pushedimage="images\folder_hot.png" borderround="3,3" cursor="hand" />
+					</HorizontalLayout>
+					<Control height="20" />
+					<!--	安装按钮	-->
+					<Button name="custom_install_btn" text="install_now" resourcetext="true" style="btn_primary" width="240" height="44" />
+					<!--	桌面快捷方式	-->
+					<HorizontalLayout height="26" childalign="center" childvalign="vcenter" padding="0,6,0,0">
+						<CheckBox name="desktop_check" />
+						<Button name="desktop_label" text="desktop_shortcut" resourcetext="true" style="text_primary" font="0" hottextcolor="#FFFFFFFF" autocalcwidth="true" padding="5,0,0,0" userdata="desktop_check" />
+					</HorizontalLayout>
+				</VerticalLayout>
+			</VerticalLayout>
+			<!--	底部：切换快速安装和协议	-->
+			<HorizontalLayout height="26" childvalign="vcenter" padding="0,10,10,6">
+				<HorizontalLayout name="agree_area2" childvalign="vcenter" padding="10,0,0,0">
+					<CheckBox name="agree_check_custom" />
+					<Button name="agree_label_custom" text="agree_prefix" resourcetext="true" style="text_primary" font="0" hottextcolor="#FFFFFFFF" autocalcwidth="true" padding="5,0,0,0" userdata="agree_check_custom" />
+					<Button name="privacy_link_custom" text="privacy_text" resourcetext="true" style="text_link" font="0" autocalcwidth="true" padding="2,0,0,0" cursor="hand" />
+				</HorizontalLayout>
+				<Button name="switch_quick_btn" text="quick_install" resourcetext="true" style="text_primary" font="0" hottextcolor="#FFFFFFFF" autocalcwidth="true" cursor="hand" />
+			</HorizontalLayout>
+		</VerticalLayout>
+		<!--	第三页：安装进度页面	-->
+		<VerticalLayout name="page3" padding="30,30,30,30" visible="false">
+			<VerticalLayout childvalign="vcenter">
+				<!--	进度条	-->
+				<Progress name="install_progress" />
+				<Control height="20" />
+				<!--	进度文本	-->
+				<Text name="progress_text" text="installing" resourcetext="true" style="text_secondary" height="40" font="0" align="center" />
+			</VerticalLayout>
+		</VerticalLayout>
+		<!--	第四页：安装完成页面	-->
+		<VerticalLayout name="page4" visible="false">
+			<!--	立即打开按钮	-->
+			<VerticalLayout childalign="center" childvalign="vcenter" padding="0,0,0,36">
+				<Control width="120" height="120" bkimage="images\success.png" />
+				<Button name="launch_btn" text="launch_now" resourcetext="true" width="240" height="44" padding="0,40,0,0" style="btn_primary" />
+			</VerticalLayout>
+		</VerticalLayout>
+	</VerticalLayout>
+</Window>

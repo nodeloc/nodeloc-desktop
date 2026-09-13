@@ -1,0 +1,52 @@
+.wrapper {
+  max-width: 720px;
+  margin: 0 0 0.85em;
+}
+
+.poster {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 0 0.85em;
+  padding: 0;
+  border: none;
+  border-radius: var(--radius-md);
+  background-color: #000000;
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 16 / 9;
+}
+
+.play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #ffffff;
+  background: rgb(0 0 0 / 0.55);
+  transition: transform var(--duration-quick) var(--ease-standard);
+}
+
+.poster:hover .play {
+  transform: scale(1.08);
+}
+
+.video {
+  display: block;
+  width: 100%;
+  max-height: 70vh;
+  border-radius: var(--radius-md);
+  background: #000000;
+}
+
+.note {
+  margin-top: var(--space-2);
+  font-size: 12px;
+  color: var(--muted-55);
+}

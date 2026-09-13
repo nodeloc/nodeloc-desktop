@@ -1,0 +1,16 @@
+.state {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  min-height: 160px;
+  font-size: 13px;
+  color: var(--muted-55);
+}
+
+.reason {
+  flex: 0 1 220px;
+  height: 30px;
+}

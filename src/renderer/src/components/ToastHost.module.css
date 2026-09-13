@@ -1,0 +1,41 @@
+.host {
+  position: fixed;
+  top: calc(var(--titlebar-height) + var(--space-4));
+  left: 50%;
+  z-index: 1000;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.toast {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  max-width: min(520px, 80vw);
+  padding: var(--space-3) var(--space-6);
+  border: none;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  box-shadow: var(--elevation-lg);
+  backdrop-filter: blur(16px);
+  pointer-events: auto;
+  animation: toast-in 220ms var(--ease-standard);
+}
+
+.toast[data-tone='success'] svg {
+  color: var(--success);
+}
+
+.toast[data-tone='danger'] svg {
+  color: var(--danger);
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}

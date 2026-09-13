@@ -1,0 +1,44 @@
+/* --reader-max-width follows the reading mode (set by ReaderFrame). */
+.header {
+  max-width: var(--reader-max-width, 880px);
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-8) 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.tag {
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  color: var(--muted-62);
+  background: var(--neutral-300);
+}
+
+.tag:hover {
+  color: var(--text);
+}
+
+.body {
+  margin-top: var(--space-6);
+}
+
+.repliesBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--divider);
+}
+
+.repliesBar h2 {
+  font-size: 15px;
+  font-weight: 600;
+}

@@ -1,0 +1,274 @@
+/* Typography for rendered post HTML. Element selectors are scoped under .content. */
+
+.content {
+  min-width: 0;
+  color: var(--text);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  user-select: text;
+}
+
+.body {
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.reply {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.content > :first-child {
+  margin-top: 0;
+}
+
+.content > :last-child {
+  margin-bottom: 0;
+}
+
+.content :global(p),
+.content :global(ul),
+.content :global(ol),
+.content :global(blockquote),
+.content :global(details),
+.content :global(aside),
+.content :global(.table-scroll) {
+  margin: 0 0 0.85em;
+}
+
+.content :global(h1),
+.content :global(h2),
+.content :global(h3),
+.content :global(h4),
+.content :global(h5),
+.content :global(h6) {
+  margin: 1.1em 0 0.5em;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.content :global(h1) {
+  font-size: 1.5em;
+}
+
+.content :global(h2) {
+  font-size: 1.32em;
+}
+
+.content :global(h3) {
+  font-size: 1.16em;
+}
+
+.content :global(h4),
+.content :global(h5),
+.content :global(h6) {
+  font-size: 1em;
+}
+
+.content :global(ul),
+.content :global(ol) {
+  padding-left: 1.6em;
+}
+
+.content :global(ul) {
+  list-style: disc;
+}
+
+.content :global(ol) {
+  list-style: decimal;
+}
+
+.content :global(li) {
+  margin: 0.2em 0;
+}
+
+.content :global(li > ul),
+.content :global(li > ol) {
+  margin-bottom: 0;
+}
+
+.content :global(a) {
+  color: var(--link);
+}
+
+.content :global(a:hover) {
+  text-decoration: underline;
+}
+
+.content :global(strong) {
+  font-weight: 600;
+}
+
+.content :global(hr) {
+  height: 1px;
+  margin: 1.2em 0;
+  border: none;
+  background: var(--divider);
+}
+
+.content :global(blockquote) {
+  padding: 0.2em 0 0.2em 1em;
+  border-left: 3px solid var(--neutral-400);
+  color: var(--muted-72);
+}
+
+.content :global(code) {
+  padding: 0.1em 0.35em;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: var(--neutral-300);
+}
+
+.content :global(kbd) {
+  padding: 0.05em 0.4em;
+  border: 1px solid var(--neutral-400);
+  border-bottom-width: 2px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+
+.content :global(mark) {
+  color: inherit;
+  background: color-mix(in srgb, var(--highlight) 60%, transparent);
+}
+
+.content :global(.table-scroll) {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.content :global(table) {
+  border-collapse: collapse;
+  font-size: 0.93em;
+}
+
+.content :global(th),
+.content :global(td) {
+  padding: 0.45em 0.8em;
+  border: 1px solid var(--divider);
+  text-align: left;
+  vertical-align: top;
+}
+
+.content :global(th) {
+  font-weight: 600;
+  background: var(--surface);
+}
+
+.content :global(details) {
+  padding: 0.4em 0.9em;
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-md);
+}
+
+.content :global(summary) {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.content :global(details[open] > summary) {
+  margin-bottom: 0.5em;
+}
+
+.content :global(img.emoji) {
+  display: inline-block;
+  width: 1.3em;
+  height: 1.3em;
+  margin: 0 0.05em;
+  vertical-align: -0.28em;
+  object-fit: contain;
+}
+
+.content :global(img.emoji.only-emoji) {
+  width: 2.4em;
+  height: 2.4em;
+}
+
+.content :global(a.mention),
+.content :global(a.mention-group) {
+  padding: 0 0.3em;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  color: var(--accent-700);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+@media (prefers-color-scheme: dark) {
+  .content :global(a.mention),
+  .content :global(a.mention-group) {
+    color: var(--accent);
+  }
+}
+
+.content :global(a.hashtag-cooked) {
+  padding: 0 0.35em;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  color: var(--text);
+  background: var(--neutral-300);
+}
+
+/* Link previews (onebox). */
+.content :global(aside.onebox) {
+  padding: 0.8em 1em;
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.content :global(aside.onebox header.source) {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  margin-bottom: 0.4em;
+  font-size: 0.82em;
+  color: var(--muted-55);
+}
+
+.content :global(aside.onebox header.source img) {
+  width: 16px;
+  height: 16px;
+}
+
+.content :global(aside.onebox h3),
+.content :global(aside.onebox h4) {
+  margin: 0 0 0.3em;
+  font-size: 1em;
+}
+
+.content :global(aside.onebox .onebox-body) {
+  display: flow-root;
+  font-size: 0.92em;
+  color: var(--muted-72);
+}
+
+.content :global(aside.onebox .onebox-body img) {
+  float: right;
+  max-width: 120px;
+  max-height: 120px;
+  margin: 0 0 0.5em 1em;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.content :global(aside.onebox .onebox-body p) {
+  margin-bottom: 0.4em;
+}
+
+.content :global(aside.onebox .onebox-metadata),
+.content :global(aside.onebox .github-info) {
+  font-size: 0.85em;
+  color: var(--muted-55);
+}
+
+.content :global(.footnotes-sep) {
+  margin-top: 1.5em;
+}
+
+.content :global(.footnotes-list) {
+  font-size: 0.9em;
+  color: var(--muted-72);
+}

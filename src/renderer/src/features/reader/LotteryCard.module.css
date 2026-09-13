@@ -1,0 +1,182 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin: var(--space-4) 0;
+  padding: var(--space-6);
+  border: 1px solid color-mix(in srgb, var(--accent-2) 45%, transparent);
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--accent-2) 6%, var(--bg));
+}
+
+.card[data-status='closed'] {
+  border-color: var(--divider);
+  background: var(--surface);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.icon {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 22px;
+  color: var(--accent-2-600);
+  background: color-mix(in srgb, var(--accent-2) 18%, transparent);
+}
+
+.headline {
+  flex: 1;
+  min-width: 0;
+}
+
+.kicker {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent-2-600);
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.status {
+  padding: 2px var(--space-3);
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-2-600);
+  background: color-mix(in srgb, var(--accent-2) 16%, transparent);
+}
+
+.levels {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.levels li {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  font-size: 14px;
+}
+
+.levelName {
+  flex: none;
+  min-width: 56px;
+  font-weight: 600;
+}
+
+.prize {
+  flex: 1;
+  min-width: 0;
+  color: var(--muted-88);
+}
+
+.quantity {
+  font-weight: 600;
+  color: var(--accent-2-600);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.stats dt {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.stats dd {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted-55);
+}
+
+.winners h4 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  font-size: 13px;
+}
+
+.winners ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.winners li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 13px;
+}
+
+.person {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text);
+}
+
+.participants {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.muted {
+  font-size: 12px;
+  color: var(--muted-55);
+}
+
+.join {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.quantityField,
+.randomField {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 12px;
+  color: var(--muted-62);
+}
+
+.quantityField input {
+  width: 72px;
+  height: 28px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  color: var(--text);
+  background: var(--bg);
+}

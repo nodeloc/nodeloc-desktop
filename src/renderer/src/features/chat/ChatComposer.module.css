@@ -1,0 +1,127 @@
+.composer {
+  flex: none;
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  transition: border-color var(--duration-quick) var(--ease-standard);
+}
+
+.inset {
+  margin: 0 var(--space-6) var(--space-6);
+}
+
+.composer:focus-within {
+  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+}
+
+.dragging {
+  border-style: dashed;
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 6%, var(--surface));
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-2) var(--space-1) var(--space-4);
+  border-bottom: 1px solid var(--divider);
+  font-size: 12px;
+  color: var(--muted-62);
+}
+
+.banner > svg {
+  flex: none;
+  font-size: 14px;
+}
+
+.bannerTitle {
+  flex: none;
+  font-weight: 600;
+  color: var(--muted-88);
+}
+
+.bannerExcerpt {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.uploads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-3) 0;
+}
+
+.upload {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  max-width: 220px;
+  height: 36px;
+  padding: 0 2px 0 var(--space-2);
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  background: var(--bg);
+  box-shadow: var(--elevation-sm);
+}
+
+.upload > svg {
+  flex: none;
+  font-size: 16px;
+  color: var(--muted-55);
+}
+
+.uploadFailed,
+.uploadFailed > svg {
+  color: var(--danger);
+}
+
+.thumb {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+}
+
+.uploadName {
+  min-width: 0;
+  padding-right: var(--space-2);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.inputRow {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-2);
+  padding: var(--space-2);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  max-height: 200px;
+  padding: 6px var(--space-2);
+  border: none;
+  outline: none;
+  font: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text);
+  background: transparent;
+  resize: none;
+}
+
+.input::placeholder {
+  color: var(--muted-45);
+}
+
+.send.sendReady {
+  color: var(--accent);
+}

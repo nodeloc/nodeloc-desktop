@@ -1,0 +1,7 @@
+.wrap {
+  padding: var(--space-4) var(--space-3) 0;
+}
+
+.button {
+  width: 100%;
+}

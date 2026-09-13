@@ -1,0 +1,28 @@
+.switcher {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  padding: 2px;
+  border-radius: var(--radius-md);
+  background: var(--neutral-300);
+}
+
+.option {
+  height: 26px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--muted-62);
+  background: transparent;
+}
+
+.option:hover {
+  color: var(--text);
+}
+
+.selected,
+.selected:hover {
+  color: var(--text);
+  background: var(--bg);
+  box-shadow: var(--elevation-sm);
+}

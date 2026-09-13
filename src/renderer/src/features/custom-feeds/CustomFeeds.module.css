@@ -1,0 +1,145 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted-72);
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0 var(--space-4);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text);
+  background: var(--surface);
+  outline: none;
+}
+
+.input {
+  height: 36px;
+}
+
+.textarea {
+  min-height: 72px;
+  padding-block: var(--space-3);
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--accent);
+  background: var(--bg);
+}
+
+.counter {
+  align-self: flex-end;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--muted-45);
+}
+
+.nodes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--divider);
+}
+
+.nodesTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted-72);
+}
+
+.nodeList {
+  display: flex;
+  flex-direction: column;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.nodeRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 36px;
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+}
+
+.nodeRow:hover {
+  background: var(--hover);
+}
+
+.nodeName {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.hint {
+  font-size: 12px;
+  color: var(--muted-45);
+}
+
+.footerSpacer {
+  flex: 1;
+}
+
+.danger {
+  color: var(--danger);
+}
+
+.danger:hover:not(:disabled) {
+  color: var(--danger);
+  background: color-mix(in srgb, var(--danger) 10%, transparent);
+}
+
+.dangerSolid {
+  color: #ffffff;
+  background: var(--danger);
+}
+
+.dangerSolid:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--danger) 88%, #000000);
+}
+
+/* Home sidebar "New feed" row. */
+.createRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  min-height: 30px;
+  padding: 0 var(--space-3);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  color: var(--muted-55);
+  background: transparent;
+}
+
+.createRow:hover {
+  color: var(--text);
+  background: var(--hover);
+}
+
+.createRow svg {
+  font-size: 16px;
+}

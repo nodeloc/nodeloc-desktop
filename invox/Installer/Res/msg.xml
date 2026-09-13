@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window caption="0,0,0,40" size="280,224" roundcorner="12,12" showshadow="true" shadowimage="images/shadow.png" shadowsize="6" shadowcorner="8,8,8,8">
+  <Font id="0" name="微软雅黑" size="12" default="true" />
+  <Font id="1" name="微软雅黑" size="14" />
+  <Default name="Label" value="textcolor=&quot;#FFFFFFFF&quot;" />
+  <Default name="Button" value="textcolor=&quot;#FFFFFFFF&quot; cursor=&quot;hand&quot;" />
+  <Style name="btn" value="height=&quot;32&quot; font=&quot;1&quot; borderround=&quot;16,16&quot;" />
+  <Style name="btn_primary" value="style=&quot;btn&quot; disabledtextcolor=&quot;#FF769084&quot; bkcolor=&quot;#FF009966&quot; hotbkcolor=&quot;#FF00B87A&quot; disabledbkcolor=&quot;#80009966&quot;" />
+  <Style name="btn_secondary" value="style=&quot;btn&quot; disabledtextcolor=&quot;#FF718298&quot; bkcolor=&quot;#FF263647&quot; hotbkcolor=&quot;#FF304459&quot; disabledbkcolor=&quot;#80263647&quot;" />
+
+  <VerticalLayout bkcolor="#FF131D29">
+    <HorizontalLayout name="titlebar" height="40" childvalign="vcenter" bkcolor="#FF172433">
+    	<Label name="message_title" text="msgbox_title" resourcetext="true" padding="12,0,0,0" valign="vcenter" textcolor="#FFFFFFFF" font="1" />
+      <Button name="closebtn" width="36" height="36" normalimage="file='images\close.png' dest='10,10,26,26'" hotimage="file='images\close_hot.png' dest='10,10,26,26'" />
+    </HorizontalLayout>
+    <VerticalLayout name="body" padding="12,12,12,20">
+      <Text name="message_text" text="" resourcetext="true" textcolor="#FFFFFFFF" align="center" valign="top" wordbreak="true" />
+    </VerticalLayout>
+    <VerticalLayout name="footer" height="48">
+      <HorizontalLayout height="36" childalign="center">
+        <Button name="cancel_btn" text="msgbox_cancel" resourcetext="true" style="btn_secondary" textpadding="16,0,16,0" autocalcwidth="true" />
+        <Control width="16" />
+        <Button name="confirm_btn" text="msgbox_confirm" resourcetext="true" style="btn_primary" textpadding="16,0,16,0" autocalcwidth="true" />
+      </HorizontalLayout>
+    </VerticalLayout>
+  </VerticalLayout>
+</Window>

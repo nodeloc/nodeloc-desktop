@@ -1,0 +1,244 @@
+/*
+ * Thread geometry mirrors the constants in ReplyItem.tsx: a 28px avatar
+ * column, 8px gap, 36px per level; lines run down each avatar's centre.
+ * --reader-max-width follows the reading mode (set by ReaderFrame).
+ */
+.row {
+  --thread-line: color-mix(in srgb, var(--text) 18%, transparent);
+
+  max-width: var(--reader-max-width, 880px);
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+}
+
+.row[data-depth='0'] {
+  padding-top: var(--space-3);
+}
+
+.inner {
+  position: relative;
+}
+
+.highlighted .post {
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--highlight) 18%, transparent);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--highlight) 18%, transparent);
+}
+
+/* ── Circuit lines ─────────────────────────────────────────────── */
+
+.lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* A vertical line with a wider invisible hit area; `left` is the line's x. */
+.line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 16px;
+  margin-left: -8px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.line::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 8px;
+  width: 1px;
+  content: '';
+  background: var(--thread-line);
+  transition: background-color var(--duration-quick) var(--ease-standard);
+}
+
+.line:hover::after {
+  background: var(--accent);
+}
+
+/* The rounded L from the parent's line into this row. */
+.elbow {
+  position: absolute;
+  top: 0;
+  border-bottom: 1px solid var(--thread-line);
+  border-left: 1px solid var(--thread-line);
+  border-bottom-left-radius: 12px;
+}
+
+/* ── Post ──────────────────────────────────────────────────────── */
+
+.post {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  column-gap: 8px;
+  padding: 8px 0 6px;
+}
+
+.gutter {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  height: 28px;
+}
+
+.avatarPlaceholder {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--neutral-300);
+}
+
+.main {
+  min-width: 0;
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  min-height: 28px;
+}
+
+/* ⊖ / ⊕ sitting on a post's line; `left` is the line's x. The page colour behind it hides the line. */
+.foldIcon {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  font-size: 14px;
+  color: var(--muted-45);
+  background: var(--bg);
+  cursor: pointer;
+  transition: color var(--duration-quick) var(--ease-standard);
+}
+
+.foldIcon:hover,
+.foldIcon:focus-visible {
+  color: var(--accent);
+}
+
+.deletedAuthor {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--muted-45);
+}
+
+.replyTo {
+  font-size: 12px;
+  color: var(--muted-45);
+}
+
+.replyTo:hover {
+  color: var(--accent);
+}
+
+.body {
+  padding-top: var(--space-1);
+}
+
+/* ── Collapsed: one line, ⊕ in the avatar's place ─────────────── */
+
+.collapsedPost {
+  display: block;
+}
+
+.collapsedRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  max-width: 100%;
+  height: 28px;
+  padding: 0 var(--space-3) 0 0;
+  border: none;
+  border-radius: var(--radius-pill);
+  text-align: left;
+  background: transparent;
+  cursor: pointer;
+}
+
+.expandIcon {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 18px;
+  color: var(--muted-45);
+  background: var(--bg);
+  transition: color var(--duration-quick) var(--ease-standard);
+}
+
+.collapsedName {
+  overflow: hidden;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--muted-72);
+}
+
+.collapsedCount {
+  flex: none;
+  font-size: 12px;
+  color: var(--muted-45);
+}
+
+.collapsedRow:hover .expandIcon,
+.collapsedRow:focus-visible .expandIcon,
+.collapsedRow:hover .collapsedCount {
+  color: var(--accent);
+}
+
+/* ── "More replies" ────────────────────────────────────────────── */
+
+.moreInner {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.more {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 24px;
+  padding: 0 var(--space-3);
+  border: none;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  background: transparent;
+}
+
+.more:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.more:disabled {
+  color: var(--muted-45);
+}

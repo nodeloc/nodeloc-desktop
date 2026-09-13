@@ -1,0 +1,385 @@
+.item {
+  padding: 0 var(--space-4);
+}
+
+.inThread {
+  padding: 0;
+}
+
+.dateSeparator {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin: var(--space-6) var(--space-3) var(--space-2);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted-55);
+}
+
+.dateSeparator::before,
+.dateSeparator::after {
+  flex: 1;
+  height: 1px;
+  content: '';
+  background: var(--divider);
+}
+
+/* The read position when the channel opened; label on the right, as in Discord. */
+.unreadDivider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin: var(--space-3) var(--space-3) var(--space-1);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--danger);
+}
+
+.unreadDivider::before {
+  flex: 1;
+  height: 1px;
+  content: '';
+  background: color-mix(in srgb, var(--danger) 60%, transparent);
+}
+
+.message {
+  position: relative;
+  margin-top: var(--space-3);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.grouped {
+  margin-top: 0;
+}
+
+.message:hover {
+  background: var(--hover);
+}
+
+.highlighted {
+  animation: highlight 2.4s var(--ease-standard);
+}
+
+@keyframes highlight {
+  0%,
+  40% {
+    background: color-mix(in srgb, var(--highlight) 28%, transparent);
+  }
+}
+
+.sending .body {
+  opacity: 0.6;
+}
+
+.line {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.gutter {
+  display: flex;
+  flex: none;
+  justify-content: center;
+  width: 36px;
+  padding-top: 2px;
+}
+
+.inThread .gutter {
+  width: 28px;
+}
+
+.hoverTime {
+  visibility: hidden;
+  font-size: 10px;
+  line-height: 22px;
+  color: var(--muted-45);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.message:hover .hoverTime {
+  visibility: visible;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+}
+
+.meta {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  line-height: 1.4;
+}
+
+.username {
+  min-width: 0;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.username:hover {
+  text-decoration: underline;
+}
+
+.time {
+  flex: none;
+  font-size: 11px;
+  color: var(--muted-45);
+  font-variant-numeric: tabular-nums;
+}
+
+.edited {
+  font-size: 11px;
+  color: var(--muted-45);
+}
+
+.replyPreview {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  max-width: 100%;
+  margin: 0 0 2px calc(36px + var(--space-4));
+  padding: 0;
+  border: none;
+  font-size: 12px;
+  text-align: left;
+  color: var(--muted-55);
+  background: transparent;
+}
+
+.inThread .replyPreview {
+  margin-left: calc(28px + var(--space-4));
+}
+
+.replyPreview:hover {
+  color: var(--text);
+}
+
+.replyPreview > svg {
+  flex: none;
+  font-size: 13px;
+}
+
+.replyUser {
+  flex: none;
+  font-weight: 600;
+  color: var(--muted-72);
+}
+
+.replyExcerpt {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.deleted {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 13px;
+  font-style: italic;
+  color: var(--muted-45);
+}
+
+.linkButton {
+  padding: 0;
+  border: none;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--link);
+  background: transparent;
+}
+
+.linkButton:hover {
+  text-decoration: underline;
+}
+
+.uploads {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.imageButton {
+  display: block;
+  max-width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--neutral-300);
+  cursor: zoom-in;
+}
+
+.imageButton img {
+  display: block;
+  max-width: min(320px, 100%);
+  max-height: 240px;
+  object-fit: cover;
+}
+
+.file {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  max-width: 100%;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  color: var(--link);
+  background: var(--surface);
+}
+
+.file:hover {
+  background: var(--bg);
+}
+
+.fileName {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.fileSize {
+  flex: none;
+  font-size: 11px;
+  color: var(--muted-45);
+}
+
+.reactions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.reaction {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: 24px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted-72);
+  background: var(--surface);
+  font-variant-numeric: tabular-nums;
+}
+
+.reaction:hover:not(:disabled) {
+  border-color: var(--neutral-500);
+}
+
+.reaction img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.reacted {
+  color: var(--accent-700);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+}
+
+@media (prefers-color-scheme: dark) {
+  .reacted {
+    color: var(--accent);
+  }
+}
+
+.threadChip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  max-width: 100%;
+  margin-top: var(--space-2);
+  padding: var(--space-1) var(--space-3) var(--space-1) var(--space-1);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  background: var(--surface);
+}
+
+.threadChip:hover {
+  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+}
+
+.threadAvatars {
+  display: flex;
+}
+
+.threadAvatars > * + * {
+  margin-left: -6px;
+  box-shadow: 0 0 0 2px var(--surface);
+}
+
+.threadCount {
+  font-weight: 600;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.threadTime {
+  color: var(--muted-45);
+  white-space: nowrap;
+}
+
+.sendState {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--muted-45);
+}
+
+.sendFailed {
+  color: var(--danger);
+}
+
+.toolbar {
+  position: absolute;
+  top: -14px;
+  right: var(--space-3);
+  z-index: 4;
+  display: none;
+  align-items: center;
+  gap: 1px;
+  padding: 2px;
+  border-radius: var(--radius-md);
+  background: var(--bg);
+  box-shadow: var(--elevation-md);
+}
+
+.message:hover .toolbar,
+.toolbar:focus-within,
+.toolbarOpen {
+  display: flex;
+}
+
+.pickerAnchor {
+  position: relative;
+  display: inline-flex;
+}

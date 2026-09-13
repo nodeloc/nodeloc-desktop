@@ -1,0 +1,141 @@
+/*
+ * Design tokens, value-for-value from the iOS app's Theme.swift.
+ * Light is the default; dark follows the OS or the in-app choice
+ * (the main process sets nativeTheme.themeSource, which drives this query).
+ */
+:root {
+  color-scheme: light;
+
+  /* Core roles */
+  --bg: #ffffff;
+  --surface: #f7f7f7;
+  --text: #222222;
+  --divider: rgb(34 34 34 / 0.12);
+  --accent: #009966;
+  --accent-2: #ff9933;
+  --header-bg: #ffffff;
+  --header-text: #333333;
+  --selected: #cdfeee;
+  --hover: #f2f2f2;
+  --highlight: #ffff4d;
+  --danger: #c80001;
+  --success: #009900;
+  --love: #fa6c8d;
+  --link: #3366ff;
+
+  /* Neutral ramp */
+  --neutral-100: #ffffff;
+  --neutral-200: #f7f7f7;
+  --neutral-300: #f2f2f2;
+  --neutral-400: #e3e3e3;
+  --neutral-500: #bdbdbd;
+  --neutral-600: #8f8f8f;
+  --neutral-700: #666666;
+  --neutral-800: #333333;
+  --neutral-900: #222222;
+
+  /* Accent ramp */
+  --accent-100: #cdfeee;
+  --accent-200: #a3f6dc;
+  --accent-300: #6fe9c5;
+  --accent-400: #3ad4a8;
+  --accent-500: #009966;
+  --accent-600: #00875a;
+  --accent-700: #00714c;
+  --accent-800: #005a3e;
+  --accent-900: #00402c;
+
+  /* Accent-2 ramp */
+  --accent-2-100: #ffe9cc;
+  --accent-2-500: #ff9933;
+  --accent-2-600: #e37e1a;
+
+  /* Muted text: the text color at fixed opacities, as on iOS */
+  --muted-28: color-mix(in srgb, var(--text) 28%, transparent);
+  --muted-35: color-mix(in srgb, var(--text) 35%, transparent);
+  --muted-45: color-mix(in srgb, var(--text) 45%, transparent);
+  --muted-55: color-mix(in srgb, var(--text) 55%, transparent);
+  --muted-62: color-mix(in srgb, var(--text) 62%, transparent);
+  --muted-72: color-mix(in srgb, var(--text) 72%, transparent);
+  --muted-88: color-mix(in srgb, var(--text) 88%, transparent);
+
+  /* Spacing */
+  --space-1: 2.8px;
+  --space-2: 5.6px;
+  --space-3: 8.4px;
+  --space-4: 11.2px;
+  --space-6: 16.8px;
+  --space-8: 22.4px;
+
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+
+  /* Elevation: hairline edge plus ambient shadow */
+  --elevation-sm: 0 0 0 1px var(--neutral-400);
+  --elevation-md: 0 0 0 1px var(--neutral-400), 0 6px 18px rgb(0 0 0 / 0.08);
+  --elevation-lg: 0 0 0 1px var(--neutral-500), 0 16px 40px rgb(0 0 0 / 0.14);
+
+  /* Type */
+  --font-sans: 'Inter', 'Segoe UI Variable Text', 'Segoe UI', 'Microsoft YaHei UI', 'Microsoft YaHei',
+    sans-serif;
+  --font-mono: 'Cascadia Code', 'Cascadia Mono', Consolas, 'Microsoft YaHei UI', monospace;
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --duration-quick: 180ms;
+
+  /* Desktop layout */
+  --titlebar-height: 36px;
+  --rail-width: 72px;
+  --sidebar-width: 320px;
+  --detail-width: 320px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+
+    --bg: #0b0f0e;
+    --surface: #171c1a;
+    --text: #f1f4f2;
+    --divider: rgb(255 255 255 / 0.14);
+    --accent: #26d99b;
+    --accent-2: #ffb15c;
+    --header-bg: #0b0f0e;
+    --header-text: #f1f4f2;
+    --selected: #133d31;
+    --hover: #202624;
+    --highlight: #d9c93f;
+    --danger: #ff6b6b;
+    --success: #4adb84;
+    --love: #ff7a9a;
+    --link: #7ea7ff;
+
+    --neutral-100: #f7faf8;
+    --neutral-200: #eef2ef;
+    --neutral-300: #232927;
+    --neutral-400: #343b38;
+    --neutral-500: #8b938f;
+    --neutral-600: #a6ada9;
+    --neutral-700: #c4cbc7;
+    --neutral-800: #1d2320;
+    --neutral-900: #050807;
+
+    --accent-100: #d7fff2;
+    --accent-200: #9ff5d9;
+    --accent-300: #6fe9c5;
+    --accent-400: #42ddb1;
+    --accent-500: #26d99b;
+    --accent-600: #55e2b0;
+    --accent-700: #7bebc5;
+    --accent-800: #064b38;
+    --accent-900: #033326;
+
+    --accent-2-100: #ffe4bf;
+    --accent-2-500: #ffb15c;
+    --accent-2-600: #ffc078;
+  }
+}

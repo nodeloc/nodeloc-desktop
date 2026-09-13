@@ -1,0 +1,147 @@
+/* Shared by the browse page and the section page. */
+.page {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.toolbar {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-3);
+  height: 48px;
+  padding: 0 var(--space-4) 0 var(--space-6);
+  border-bottom: 1px solid var(--divider);
+}
+
+.toolbar > button {
+  margin-left: calc(-1 * var(--space-3));
+}
+
+.title {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.titleText {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.scroller {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: calc(2 * var(--space-8));
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-8) calc(2 * var(--space-8));
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-size: 14px;
+  color: var(--muted-55);
+}
+
+.intro strong {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted-45);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+
+.sectionHeading {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.sectionCount {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted-45);
+  font-variant-numeric: tabular-nums;
+}
+
+.dot {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.sectionDescription {
+  font-size: 13px;
+  color: var(--muted-55);
+}
+
+.sectionLink {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.sectionLink:hover {
+  text-decoration: underline;
+}
+
+.muted {
+  font-size: 13px;
+  color: var(--muted-45);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+}
+
+.end {
+  font-size: 12px;
+  color: var(--muted-45);
+}

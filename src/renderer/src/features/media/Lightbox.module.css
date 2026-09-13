@@ -1,0 +1,104 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  background: rgb(0 0 0 / 0.88);
+  animation: fade-in 160ms var(--ease-standard);
+}
+
+.stage {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: zoom-out;
+}
+
+.stage[data-zoomed='true'] {
+  cursor: grab;
+}
+
+.stage[data-zoomed='true']:active {
+  cursor: grabbing;
+}
+
+.image {
+  max-width: calc(100vw - 120px);
+  max-height: calc(100vh - 120px);
+  object-fit: contain;
+  cursor: zoom-in;
+  transition: transform 80ms linear;
+  user-select: none;
+}
+
+.stage[data-zoomed='true'] .image {
+  cursor: inherit;
+}
+
+.toolbar {
+  position: absolute;
+  top: calc(var(--titlebar-height) + var(--space-3));
+  right: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-pill);
+  background: rgb(20 20 20 / 0.7);
+}
+
+.toolbar button {
+  color: #f1f4f2 !important;
+}
+
+.toolbar button:hover {
+  background: rgb(255 255 255 / 0.12) !important;
+}
+
+.counter,
+.scale {
+  padding: 0 var(--space-2);
+  font-size: 13px;
+  color: #f1f4f2;
+  font-variant-numeric: tabular-nums;
+}
+
+.scale {
+  min-width: 52px;
+  height: 28px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: transparent;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  font-size: 22px !important;
+  color: #f1f4f2 !important;
+  background: rgb(20 20 20 / 0.6) !important;
+  transform: translateY(-50%);
+}
+
+.nav:hover {
+  background: rgb(60 60 60 / 0.8) !important;
+}
+
+.prev {
+  left: var(--space-6);
+}
+
+.next {
+  right: var(--space-6);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}

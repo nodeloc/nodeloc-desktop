@@ -1,0 +1,50 @@
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: 24px;
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: default;
+}
+
+.chip[data-tone='accent2'] {
+  color: var(--accent-2-600);
+  background: color-mix(in srgb, var(--accent-2) 14%, transparent);
+}
+
+.chip[data-tone='danger'] {
+  color: var(--danger);
+  background: color-mix(in srgb, var(--danger) 10%, transparent);
+}
+
+.stat {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: 12px;
+  color: var(--muted-55);
+}
+
+.spacer {
+  flex: 1;
+}
+
+.reward:hover {
+  color: var(--accent-2-600) !important;
+}
+
+.bookmarked,
+.boosting {
+  color: var(--accent) !important;
+}

@@ -1,0 +1,83 @@
+.rail {
+  display: flex;
+  flex: none;
+  align-items: center;
+  user-select: none;
+}
+
+.vertical {
+  flex-direction: column;
+  width: 40px;
+  padding-top: 2px;
+}
+
+.horizontal {
+  gap: var(--space-1);
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  color: var(--muted-45);
+  background: color-mix(in srgb, currentColor 8%, transparent);
+}
+
+.horizontal .arrow {
+  border-radius: 50%;
+}
+
+.reactionSummary {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.arrow:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.up:hover:not(:disabled) {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.down:hover:not(:disabled) {
+  color: var(--accent-2-600);
+  background: color-mix(in srgb, var(--accent-2) 14%, transparent);
+}
+
+.score {
+  min-width: 2ch;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--muted-72);
+  font-variant-numeric: tabular-nums;
+}
+
+.rail[data-direction='up'] .up,
+.rail[data-direction='up'] .score {
+  color: var(--accent);
+}
+
+.rail[data-direction='up'] .up {
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+}
+
+.rail[data-direction='down'] .down,
+.rail[data-direction='down'] .score {
+  color: var(--accent-2-600);
+}
+
+.rail[data-direction='down'] .down {
+  background: color-mix(in srgb, var(--accent-2) 16%, transparent);
+}

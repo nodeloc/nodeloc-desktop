@@ -1,0 +1,46 @@
+.quote {
+  margin: 0 0 0.85em;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  background: var(--surface);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4) 0;
+  font-size: 0.86em;
+  color: var(--muted-62);
+}
+
+.avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: 600;
+  color: var(--muted-88) !important;
+}
+
+.jump {
+  display: flex;
+  margin-left: auto;
+  color: var(--muted-45) !important;
+}
+
+.jump:hover {
+  color: var(--accent) !important;
+}
+
+.body {
+  padding: var(--space-2) var(--space-4) var(--space-3);
+  font-size: 0.95em;
+  color: var(--muted-88);
+}
+
+.body > :last-child {
+  margin-bottom: 0;
+}

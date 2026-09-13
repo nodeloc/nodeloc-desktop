@@ -1,0 +1,15 @@
+.image {
+  flex: none;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.badge {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background: var(--accent);
+}

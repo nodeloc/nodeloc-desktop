@@ -1,0 +1,30 @@
+.switch {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  font-size: 15px;
+  color: var(--muted-55);
+  background: color-mix(in srgb, currentColor 8%, transparent);
+}
+
+.option:hover {
+  color: var(--text);
+  background: color-mix(in srgb, currentColor 14%, transparent);
+}
+
+.selected,
+.selected:hover {
+  color: var(--text);
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  box-shadow: none;
+}

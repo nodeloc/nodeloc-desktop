@@ -1,0 +1,172 @@
+import { defineMessages } from '../../i18n/define'
+
+export default defineMessages({
+  'zh-CN': {
+    title: '聊天',
+    channels: '频道',
+    directMessages: '私聊',
+    newDirectMessage: '发起私聊',
+    signInRequired: '登录后才能使用聊天',
+    loadFailed: '聊天加载失败',
+    noChannels: '还没有加入任何频道',
+    noDirectMessages: '还没有私聊',
+    unread: '{{count}} 条未读',
+    mentions: '{{count}} 条提及',
+    home: {
+      welcome: '欢迎来到 NodeLoc 聊天',
+      intro: '从左侧选择一个频道或私聊开始交流。',
+      recent: '最近的会话',
+      empty: '还没有会话，发起一个私聊吧',
+      noMessages: '暂无消息'
+    },
+    channel: {
+      threads: '讨论串',
+      info: '频道信息',
+      members: '{{count}} 位成员',
+      start: '这里是频道的开始',
+      newMessages: '有新消息',
+      jumpToLatest: '回到最新',
+      unreadDivider: '新消息',
+      notFound: '频道不存在或你没有权限查看',
+      today: '今天',
+      yesterday: '昨天'
+    },
+    message: {
+      edited: '已编辑',
+      deleted: '此消息已删除',
+      restore: '恢复',
+      reply: '回复',
+      react: '添加回应',
+      openThread: '在讨论串中回复',
+      copyText: '复制文本',
+      copyLink: '复制链接',
+      edit: '编辑',
+      delete: '删除',
+      more: '更多操作',
+      replies: '{{count}} 条回复',
+      sending: '发送中…',
+      failed: '发送失败',
+      retry: '重试',
+      discard: '丢弃',
+      deleteTitle: '删除消息？',
+      deleteConfirm: '删除后其他人将看不到这条消息。',
+      reactedBy: '{{users}} 回应了 :{{emoji}}:',
+      attachment: '附件',
+      commonEmoji: '常用表情'
+    },
+    composer: {
+      placeholder: '发送到 {{title}}',
+      threadPlaceholder: '回复讨论串',
+      replyingTo: '回复 {{username}}',
+      editing: '编辑消息',
+      cancel: '取消',
+      send: '发送',
+      attach: '上传图片或文件',
+      uploading: '正在上传…',
+      uploadFailed: '上传失败',
+      removeUpload: '移除'
+    },
+    threads: {
+      title: '讨论串',
+      empty: '还没有讨论串',
+      disabled: '这个频道没有开启讨论串',
+      loadMore: '加载更多',
+      back: '返回讨论串列表',
+      untitled: '讨论串',
+      starting: '正在创建讨论串…',
+      newThread: '新讨论串'
+    },
+    dm: {
+      title: '发起私聊',
+      search: '搜索用户名',
+      noResults: '没有找到用户',
+      selected: '已选择',
+      start: '开始聊天',
+      remove: '移除 {{username}}'
+    }
+  },
+  en: {
+    title: 'Chat',
+    channels: 'Channels',
+    directMessages: 'Direct messages',
+    newDirectMessage: 'New direct message',
+    signInRequired: 'Sign in to use chat',
+    loadFailed: 'Couldn’t load chat',
+    noChannels: 'You haven’t joined any channels',
+    noDirectMessages: 'No direct messages yet',
+    unread: '{{count}} unread',
+    mentions: '{{count}} mentions',
+    home: {
+      welcome: 'Welcome to NodeLoc chat',
+      intro: 'Pick a channel or direct message on the left to start talking.',
+      recent: 'Recent conversations',
+      empty: 'No conversations yet. Start a direct message.',
+      noMessages: 'No messages yet'
+    },
+    channel: {
+      threads: 'Threads',
+      info: 'Channel info',
+      members: '{{count}} members',
+      start: 'This is the start of the channel',
+      newMessages: 'New messages',
+      jumpToLatest: 'Jump to latest',
+      unreadDivider: 'New',
+      notFound: 'This channel doesn’t exist or you can’t view it',
+      today: 'Today',
+      yesterday: 'Yesterday'
+    },
+    message: {
+      edited: 'edited',
+      deleted: 'This message was deleted',
+      restore: 'Restore',
+      reply: 'Reply',
+      react: 'Add reaction',
+      openThread: 'Reply in thread',
+      copyText: 'Copy text',
+      copyLink: 'Copy link',
+      edit: 'Edit',
+      delete: 'Delete',
+      more: 'More actions',
+      replies: '{{count}} replies',
+      sending: 'Sending…',
+      failed: 'Not sent',
+      retry: 'Retry',
+      discard: 'Discard',
+      deleteTitle: 'Delete message?',
+      deleteConfirm: 'Others will no longer see this message.',
+      reactedBy: '{{users}} reacted with :{{emoji}}:',
+      attachment: 'Attachment',
+      commonEmoji: 'Frequently used'
+    },
+    composer: {
+      placeholder: 'Message {{title}}',
+      threadPlaceholder: 'Reply to thread',
+      replyingTo: 'Replying to {{username}}',
+      editing: 'Editing message',
+      cancel: 'Cancel',
+      send: 'Send',
+      attach: 'Upload an image or file',
+      uploading: 'Uploading…',
+      uploadFailed: 'Upload failed',
+      removeUpload: 'Remove'
+    },
+    threads: {
+      title: 'Threads',
+      empty: 'No threads yet',
+      disabled: 'Threads aren’t enabled in this channel',
+      loadMore: 'Load more',
+      back: 'Back to threads',
+      untitled: 'Thread',
+      starting: 'Starting thread…',
+      newThread: 'New thread'
+    },
+    dm: {
+      title: 'New direct message',
+      search: 'Search usernames',
+      noResults: 'No users found',
+      selected: 'Selected',
+      start: 'Start chatting',
+      remove: 'Remove {{username}}'
+    }
+  }
+})

@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Build Setup",
+      "command": "cmd",
+      "args": ["/c", "build-invox.bat"],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "shell": {
+          "executable": "cmd.exe",
+          "args": ["/c"]
+        }
+      },
+      "problemMatcher": ["$msCompile"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Build the Setup.sln project"
+    }
+  ],
+  "version": "2.0.0"
+}

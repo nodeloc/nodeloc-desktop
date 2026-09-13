@@ -1,0 +1,26 @@
+.spoiler {
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  filter: blur(6px);
+  background: var(--neutral-300);
+  transition: filter var(--duration-quick) var(--ease-standard);
+  user-select: none;
+}
+
+.spoiler:hover {
+  filter: blur(4px);
+}
+
+.block {
+  display: block;
+  margin: 0 0 0.85em;
+  padding: 0.4em 0.6em;
+}
+
+.revealed,
+.revealed:hover {
+  cursor: auto;
+  filter: none;
+  background: transparent;
+  user-select: text;
+}

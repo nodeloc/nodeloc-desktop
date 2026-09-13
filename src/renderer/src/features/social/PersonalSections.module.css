@@ -1,0 +1,37 @@
+.hint {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 30px;
+  padding: 0 var(--space-3);
+  font-size: 12px;
+  color: var(--muted-45);
+}
+
+.retry {
+  padding: 0;
+  border: none;
+  font: inherit;
+  font-weight: 600;
+  color: var(--accent);
+  background: none;
+}
+
+.retry:hover {
+  text-decoration: underline;
+}
+
+.skeletonRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 34px;
+  padding: 0 var(--space-3);
+}
+
+.trailing {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-variant-numeric: tabular-nums;
+}

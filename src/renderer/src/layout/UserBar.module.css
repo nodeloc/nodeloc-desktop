@@ -1,0 +1,76 @@
+.footer {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border-top: 1px solid var(--divider);
+}
+
+.tools {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 2px;
+}
+
+.userBar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-1) var(--space-1) var(--space-1) var(--space-2);
+}
+
+.identity {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+  padding: var(--space-1);
+  border: none;
+  border-radius: var(--radius-md);
+  text-align: left;
+  background: transparent;
+}
+
+.identity:hover {
+  background: var(--hover);
+}
+
+.userText {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.3;
+}
+
+.userName {
+  overflow: hidden;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.userHint {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  overflow: hidden;
+  font-size: 11px;
+  color: var(--muted-55);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.energyIcon {
+  color: var(--accent-2);
+}
+
+.warning {
+  flex: none;
+  font-size: 28px;
+  color: var(--accent-2);
+}

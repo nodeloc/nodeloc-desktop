@@ -1,0 +1,116 @@
+.titleBar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  /* Stop short of the caption buttons Windows overlays on the right. */
+  width: env(titlebar-area-width, 100%);
+  height: var(--titlebar-height);
+  padding-left: var(--space-6);
+  color: var(--header-text);
+  background: var(--header-bg);
+  user-select: none;
+  -webkit-app-region: drag;
+}
+
+.brand {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-3);
+  width: calc(var(--rail-width) + var(--sidebar-width) + 7px - var(--space-6) * 2);
+}
+
+.compact .brand {
+  width: auto;
+}
+
+.name {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.navigation {
+  display: flex;
+  flex: none;
+  gap: var(--space-1);
+  -webkit-app-region: no-drag;
+}
+
+.search {
+  position: relative;
+  flex: 0 1 460px;
+  margin: 0 auto;
+  -webkit-app-region: no-drag;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  font-size: 14px;
+  color: var(--muted-45);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.search input {
+  width: 100%;
+  height: 26px;
+  padding: 0 var(--space-4) 0 30px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  background: var(--surface);
+  outline: none;
+  transition:
+    border-color var(--duration-quick) var(--ease-standard),
+    background-color var(--duration-quick) var(--ease-standard);
+}
+
+.search input::placeholder {
+  color: var(--muted-45);
+}
+
+.search input:focus {
+  border-color: var(--accent);
+  background: var(--bg);
+}
+
+.search input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.tools {
+  display: flex;
+  flex: none;
+  gap: var(--space-2);
+  padding-right: var(--space-4);
+  -webkit-app-region: no-drag;
+}
+
+.inbox {
+  position: relative;
+  overflow: visible !important;
+}
+
+.badge {
+  position: absolute;
+  top: -3px;
+  right: -5px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: var(--radius-pill);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+  background: var(--danger);
+}
+
+.mark {
+  flex: none;
+  border-radius: 5px;
+}

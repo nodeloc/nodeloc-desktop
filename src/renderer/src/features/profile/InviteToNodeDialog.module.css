@@ -1,0 +1,62 @@
+.content,
+.nodes,
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.nodes {
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.node {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-md);
+  text-align: left;
+  color: var(--text);
+  background: var(--surface);
+}
+
+.node:hover,
+.selected {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+}
+
+.node span,
+.node strong,
+.node small {
+  display: block;
+  min-width: 0;
+}
+
+.node strong {
+  overflow: hidden;
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.node small {
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--muted-55);
+}
+
+.error {
+  font-size: 13px;
+  color: var(--danger);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding-top: var(--space-3);
+}

@@ -1,0 +1,25 @@
+.sidebar {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  width: var(--sidebar-width);
+  min-height: 0;
+  background: var(--surface);
+  border-top-left-radius: var(--radius-lg);
+  box-shadow:
+    inset 1px 1px 0 var(--divider),
+    inset -1px 0 0 var(--divider);
+  user-select: none;
+}
+
+@media (max-width: 799px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+.content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}

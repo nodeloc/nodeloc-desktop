@@ -1,0 +1,11 @@
+{
+  "VsCodeTaskButtons.tasks": [
+    {
+      "label": "$(notebook-open-as-text) Build",
+      "task": "Build Setup"
+    }
+  ],
+  "files.associations": {
+    "xstring": "cpp"
+  }
+}

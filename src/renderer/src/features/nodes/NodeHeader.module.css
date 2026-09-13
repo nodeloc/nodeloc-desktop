@@ -1,0 +1,123 @@
+.header {
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--divider);
+}
+
+/* Node backgrounds are uploaded at 3:1; the sidebar shows a shorter crop. */
+.banner {
+  display: block;
+  height: 96px;
+  overflow: hidden;
+  background: var(--neutral-300);
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wash {
+  background: linear-gradient(
+    120deg,
+    var(--node-color) 0%,
+    color-mix(in srgb, var(--node-color) 45%, var(--surface)) 100%
+  );
+}
+
+.body {
+  padding: 0 var(--space-6);
+}
+
+.identityRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: -28px;
+}
+
+/* A ring in the sidebar colour lifts the logo off the banner. */
+.logo {
+  flex: none;
+  box-shadow: 0 0 0 3px var(--surface);
+  background-color: var(--surface);
+}
+
+.logoSkeleton {
+  display: block;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--neutral-400);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+  margin-top: var(--space-3);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.nameText {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.meta {
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--muted-55);
+}
+
+.descriptionBlock {
+  margin-top: var(--space-3);
+}
+
+.description {
+  font-size: 13px;
+  color: var(--muted-88);
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.clamped {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.toggle {
+  margin-top: var(--space-1);
+  padding: 0;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  background: none;
+}
+
+.toggle:hover {
+  text-decoration: underline;
+}
+
+.skeletonLines {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
