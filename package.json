@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "description": "NodeLoc 社区 Windows 桌面客户端",
   "author": "NodeLoc",
+  "license": "MIT",
   "private": true,
   "main": "./out/main/index.js",
   "scripts": {
